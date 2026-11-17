@@ -1,0 +1,16 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { allPapers, PEARSON_MATERIALS } from '../../../lib/data';
+const as = allPapers.filter((p) => p.spec === '8FM0');
+const seriesList = [...new Set(as.map((p) => p.series))];
+---
+<Base title="Edexcel AS Further Maths past papers (8FM0) with question-by-question tables" description="Every Edexcel AS Further Maths (8FM0) paper since 2018: Core Pure and all eight options, each with a question-by-question table of topics and marks, mark schemes and examiner comments." context="past-papers-as">
+  <h1>Edexcel AS Further Maths past papers (8FM0)</h1>
+  <p>AS Further Maths is two papers: Paper 1 Core Pure Mathematics (80 marks, 1 hour 40 minutes) and Paper 2, two option papers of 40 marks each (1 hour 40 minutes in total) chosen from Further Pure 1 and 2, Further Statistics 1 and 2, Further Mechanics 1 and 2, and Decision 1 and 2. Every series since June 2018 is below.</p>
+  <p><a class="btn" href={PEARSON_MATERIALS} rel="noopener">Pearson's past-paper PDFs</a> · <a href="/past-papers/">A-level papers</a></p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Series</th><th>Papers</th></tr></thead>
+    <tbody>{seriesList.map((s) => <tr><td>{s}</td><td>{as.filter((p) => p.series === s).map((p, i) => <>{i ? ' · ' : ''}<a href={`/past-papers/${p.slug}/`}>{p.paper}</a></>)}</td></tr>)}</tbody>
+  </table></div>
+  <p class="muted">There was no AS series in November 2021. The June 2026 papers are added when Pearson releases them.</p>
+</Base>

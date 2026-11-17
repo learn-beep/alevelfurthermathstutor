@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import { waLink } from '../../lib/site';
+const personLd = { '@context': 'https://schema.org', '@type': 'Person', name: 'Emma', jobTitle: 'A-level Maths and Further Maths tutor', knowsAbout: ['A-level Further Mathematics', 'A-level Mathematics', 'Edexcel 9FM0', 'Edexcel 9MA0'] };
+---
+<Base title="Edexcel A-level Further Maths tutor: Emma, online" description="Emma taught A-level Maths and Further Maths for many years at one of the UK's top sixth-form colleges. Online one-to-one Further Maths tutoring for any board, £110 an hour." context="tutors" leadLine="Tell us the year, the options and the target grade, and we'll set up a trial lesson with Emma.">
+  <script type="application/ld+json" set:html={JSON.stringify(personLd)} />
+  <h1>Your Further Maths tutor: Emma</h1>
+  <div class="tutor-card">
+    <div class="tutor-initial" aria-hidden="true">E</div>
+    <div>
+      <p><strong>Emma</strong>, A-level Maths and Further Maths tutor</p>
+      <p>Emma taught for many years at one of the UK's top sixth-form colleges, where she taught nothing but A-level Maths and Further Maths. She has decades of experience of exactly this course: Core Pure, the Further Pure, Further Statistics, Further Mechanics and Decision options, and the A-level Maths that sits underneath them.</p>
+      <p>She teaches every A-level Maths and Further Maths specification, so Edexcel (9FM0 and AS 8FM0), AQA and OCR A and B (MEI) are all covered.</p>
+      <dl class="tutor-facts">
+        <dt>Fee</dt><dd>£110 an hour</dd>
+        <dt>Where</dt><dd>Online, one to one</dd>
+        <dt>Who</dt><dd>Year 12 (AS) and Year 13 Further Maths students, and A-level Maths students aiming for the top grades</dd>
+      </dl>
+    </div>
+  </div>
+  <p><a class="btn btn-wa" href={waLink('tutors')} rel="noopener">Message us on WhatsApp</a></p>
+
+  <h2>How it works</h2>
+  <ol>
+    <li>Message us on WhatsApp or send the enquiry form with the year, the options you're taking, the target grade and your availability.</li>
+    <li>We arrange a trial lesson with Emma.</li>
+    <li>Lessons are booked directly with Emma from then on.</li>
+  </ol>
+  <h2>What a lesson covers</h2>
+  <p>Usually one topic or one past paper: the method, then real Edexcel questions on it from this site, marked against the mark scheme. Common requests are the hardest parts of the course, such as proof by induction, complex loci, hyperbolic functions, second-order differential equations and groups, and timed paper practice in the final term.</p>
+</Base>

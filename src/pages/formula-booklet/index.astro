@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import { PEARSON_MATERIALS } from '../../lib/data';
+const given = [
+  ['Core Pure', ['$\\sum r^2 = \\tfrac{1}{6}n(n+1)(2n+1)$ and $\\sum r^3 = \\tfrac{1}{4}n^2(n+1)^2$', 'Rotation through $\\theta$ about $O$ and reflection in $y = (\\tan\\theta)x$ as matrices', 'Polar sector area $\\tfrac{1}{2}\\int r^2\\,d\\theta$', "De Moivre's theorem $\\{r(\\cos\\theta + i\\sin\\theta)\\}^n = r^n(\\cos n\\theta + i\\sin n\\theta)$ and the roots of $z^n = 1$ (A level)", 'The general Maclaurin series and the series for $e^x$, $\\ln(1+x)$, $\\sin x$, $\\cos x$, $\\arctan x$, with their validity', 'Vector product and scalar triple product as determinants; cartesian line; plane forms; distance from a point to a plane', '$\\cosh^2 x - \\sinh^2 x = 1$, $\\sinh 2x$, $\\cosh 2x$ and the log forms of arsinh, arcosh, artanh', 'Derivatives of arcsin, arccos, arctan, sinh, cosh, tanh, arsinh, arcosh, artanh', 'Integrals of sinh, cosh, tanh, $\\dfrac{1}{\\sqrt{a^2-x^2}}$, $\\dfrac{1}{a^2+x^2}$, $\\dfrac{1}{\\sqrt{x^2 \\pm a^2}}$, $\\dfrac{1}{a^2-x^2}$, $\\dfrac{1}{x^2-a^2}$']],
+  ['Further Pure', ['Conics table: ellipse, parabola, hyperbola and rectangular hyperbola (standard and parametric forms, eccentricity, foci, directrices, asymptotes)', 'Arc length and surface area of revolution, in cartesian, parametric and polar form']],
+  ['Further Statistics', ['$E(X)$, $\\mathrm{Var}(X)$ and $E(g(X))$ for discrete and continuous variables, and the CDF', 'PGF definition, $E(X) = G\'(1)$, $\\mathrm{Var}(X) = G\'\'(1) + G\'(1) - [G\'(1)]^2$, PGF of a sum', 'Binomial, Poisson, geometric and negative binomial: probability, mean, variance and PGF', 'Normal and continuous uniform: PDF, mean and variance', '$S_{xx}$, $S_{yy}$, $S_{xy}$, the PMCC, regression coefficient, residual sum of squares and Spearman\'s $r_s$', '$E(XY) = E(X)E(Y)$ and $\\mathrm{Var}(aX \\pm bY)$ for independent variables', 'Sampling distributions: $\\bar{X}$, $S^2$, the $z$, $t$, $\\chi^2$ and $F$ statistics, pooled variance', '$\\sum \\dfrac{(O-E)^2}{E} \\sim \\chi^2_\\nu$', 'Tables: binomial and Poisson cumulative, normal percentage points, $\\chi^2$, correlation critical values, $t$, $F$, random numbers']],
+  ['Further Mechanics', ['Centres of mass: triangular lamina, circular arc, sector, solid hemisphere, hemispherical shell, solid cone, conical shell', 'Circular motion: $v = r\\dot\\theta$, transverse acceleration $r\\ddot\\theta$, radial acceleration $-r\\dot\\theta^2 = -\\dfrac{v^2}{r}$']],
+  ['Decision', ['Nothing: there are no Decision formulae in the booklet']],
+];
+const learn = [
+  ['Core Pure', ['$\\sum r = \\tfrac{1}{2}n(n+1)$', "Roots and coefficients: $\\alpha + \\beta + \\gamma = -\\tfrac{b}{a}$ and the rest", '$e^{i\\theta} = \\cos\\theta + i\\sin\\theta$ and $z = re^{i\\theta}$', 'Determinant and inverse of $2 \\times 2$ and $3 \\times 3$ matrices; $(AB)^{-1} = B^{-1}A^{-1}$', 'Volumes of revolution $\\pi\\int y^2\\,dx$ and $\\pi\\int x^2\\,dy$', 'Mean value $\\dfrac{1}{b-a}\\int_a^b f(x)\\,dx$', 'Definitions $\\sinh x = \\tfrac{1}{2}(e^x - e^{-x})$, $\\cosh x = \\tfrac{1}{2}(e^x + e^{-x})$', 'Polar conversions $x = r\\cos\\theta$, $y = r\\sin\\theta$', 'Integrating factor $e^{\\int P\\,dx}$; complementary-function cases for $y\'\' + ay\' + by = 0$', 'Angle between line and plane, line and line, plane and plane, via the scalar product']],
+  ['Further Pure', ['t-formulae: $\\sin x = \\dfrac{2t}{1+t^2}$, $\\cos x = \\dfrac{1-t^2}{1+t^2}$, $\\tan x = \\dfrac{2t}{1-t^2}$ with $t = \\tan\\tfrac{x}{2}$', "Taylor series about $a$, Leibnitz's theorem and L'Hospital's rule", "Simpson's rule", 'Group axioms; Lagrange\'s theorem; Fermat\'s little theorem; Bezout\'s identity']],
+  ['Further Statistics', ['Degrees of freedom for $\\chi^2$ tests and when to combine cells (expected values below 5)', 'Hypothesis-test method and conclusions in context; size and power of a test', 'The central limit theorem conditions']],
+  ['Further Mechanics', ['Impulse $= m\\mathbf{v} - m\\mathbf{u}$; conservation of momentum', 'Kinetic energy $\\tfrac{1}{2}mv^2$, work–energy principle, power $= Fv$', "Hooke's law $T = \\dfrac{\\lambda x}{l}$ and elastic energy $\\dfrac{\\lambda x^2}{2l}$", "Newton's law of restitution", 'Simple harmonic motion: $\\ddot{x} = -\\omega^2 x$, $v^2 = \\omega^2(a^2 - x^2)$, period $\\dfrac{2\\pi}{\\omega}$']],
+  ['Decision', ['Every algorithm: sorts, bin packing, Prim, Kruskal, Dijkstra, Floyd, route inspection, nearest neighbour, the Simplex tableau, the Hungarian algorithm, the north-west corner method and the rest']],
+];
+---
+<Base title="Edexcel Further Maths formula booklet: what's given and what you must learn" description="What Pearson's formulae booklet gives you for Edexcel A-level and AS Further Maths (9FM0, 8FM0), section by section, and what you have to learn yourself." context="formula-booklet" leadLine="Want someone to drill the formulas that aren't in the booklet? Book a session.">
+  <h1>Edexcel A-level Further Maths formula booklet</h1>
+  <p>In every Edexcel Further Maths exam you get Pearson's <em>Mathematical Formulae and Statistical Tables</em> booklet, the same one used for A-level Maths. The Further Maths sections sit on top of the Maths ones, so the A-level Maths formulae (binomial series, addition formulae, the trapezium rule and so on) are available to you too. Most lost marks around it come from not knowing what's in it: students either hunt for a formula that isn't there, or memorise ones that are. This page lists both.</p>
+  <p><a class="btn btn-accent" href={PEARSON_MATERIALS} rel="noopener">Open the official booklet on Pearson's site</a></p>
+  <p class="muted">Taken from the current booklet (Issue 1). Some items, such as de Moivre's theorem and the conics table, appear only in the A-level section; AS students should check the AS section. Being checked by our tutor.</p>
+
+  <h2>Given in the booklet</h2>
+  {given.map(([strand, items]) => (<><h3>{strand}</h3><ul>{items.map((i) => <li set:html={i} />)}</ul></>))}
+
+  <h2>Not in the booklet: learn these</h2>
+  {learn.map(([strand, items]) => (<><h3>{strand}</h3><ul>{items.map((i) => <li set:html={i} />)}</ul></>))}
+
+  <h2>Test yourself</h2>
+  <p>Tap a formula to see whether it's given or must be learned. Work through the deck until you get them all.</p>
+  <div id="trainer" class="calc">
+    <p id="t-q" style="font-size:1.15rem;margin:0"></p>
+    <div class="btn-row"><button class="btn" type="button" data-ans="given">In the booklet</button><button class="btn" type="button" data-ans="learn">Must learn</button></div>
+    <p id="t-fb" class="muted" style="margin:0"></p>
+    <p class="muted" style="margin:0"><span id="t-score">0</span> right of <span id="t-n">0</span></p>
+  </div>
+
+  <script is:inline src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script>
+  <script is:inline define:vars={{ given, learn }}>
+    const render = () => renderMathInElement(document.body, { delimiters: [{ left: '$', right: '$', display: false }], throwOnError: false });
+    render();
+    const deck = [];
+    given.forEach(([s, items]) => items.forEach((i) => deck.push({ s, i, a: 'given' })));
+    learn.forEach(([s, items]) => items.forEach((i) => deck.push({ s, i, a: 'learn' })));
+    for (let k = deck.length - 1; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [deck[k], deck[j]] = [deck[j], deck[k]]; }
+    let idx = 0, score = 0, n = 0;
+    const q = document.getElementById('t-q'), fb = document.getElementById('t-fb');
+    const show = () => { const c = deck[idx % deck.length]; q.innerHTML = `<span class="muted">${c.s}:</span> ${c.i}`; fb.textContent = ''; render(); };
+    document.querySelectorAll('#trainer [data-ans]').forEach((b) => b.addEventListener('click', () => {
+      const c = deck[idx % deck.length]; n++;
+      if (b.dataset.ans === c.a) { score++; fb.textContent = c.a === 'given' ? 'Right: it is in the booklet.' : 'Right: you have to know this one.'; }
+      else fb.textContent = c.a === 'given' ? 'No: this one is given in the booklet.' : 'No: this is not in the booklet. Learn it.';
+      document.getElementById('t-score').textContent = score; document.getElementById('t-n').textContent = n;
+      idx++; setTimeout(show, 1200);
+    }));
+    show();
+  </script>
+</Base>

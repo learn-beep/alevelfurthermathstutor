@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import QuestionCard from '../../components/QuestionCard.astro';
+import spec from '../../data/spec.json';
+import { allQuestions, topicByslug } from '../../lib/data';
+export function getStaticPaths() {
+  return spec.flatMap((s) => s.statements.map((st) => ({ params: { id: st.id }, props: { st, section: s } })));
+}
+const { st, section } = Astro.props;
+const qs = allQuestions.filter((q) => q.statements.includes(st.id)).sort((a, b) => b.year - a.year);
+const marks = qs.reduce((n, q) => n + q.marks, 0);
+const topics = [...new Set(qs.flatMap((q) => q.topics))];
+---
+<Base title={`${st.id} ${st.short}: Edexcel A-level Further Maths questions on this spec statement`} description={`${qs.length} past-paper question parts assessing spec statement ${st.id} (${st.short}), with mark schemes and examiner comments.`} context={`spec:${st.id}`}>
+  <h1>{st.id} {st.short}</h1>
+  <div class="where">
+    <dl>
+      <dt>Section</dt><dd>{section.code} {section.title}</dd>
+      <dt>Level</dt><dd>{st.level || 'AS and A level'}</dd>
+      <dt>Statement</dt><dd>{st.text}</dd>
+      {st.guidance && <><dt>Guidance</dt><dd>{st.guidance}</dd></>}
+      {st.aLevelPart && <><dt>A-level only</dt><dd>{st.aLevelPart}</dd></>}
+      <dt>Since 2018</dt><dd>{qs.length} parts, {marks} marks{topics.length ? <> · topic pages: {topics.map((t, i) => <>{i ? ', ' : ''}<a href={`/questions/${t}/`}>{topicByslug.get(t)?.name ?? t}</a></>)}</> : ''}</dd>
+    </dl>
+  </div>
+  <p><a href="/specification/">Back to the checklist</a></p>
+  {qs.map((q) => <QuestionCard q={q} />)}
+</Base>

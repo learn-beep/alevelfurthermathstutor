@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.alevelfurthermathstutor.com/sitemap-index.xml

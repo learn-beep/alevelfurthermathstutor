@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import b from '../../data/boundaries.json';
+const grades = ['A*', 'A', 'B', 'C', 'D', 'E'];
+const NAMES = { '01': 'Core Pure 1', '02': 'Core Pure 2', '3A': 'Further Pure 1', '3B': 'Further Statistics 1', '3C': 'Further Mechanics 1', '3D': 'Decision 1', '4A': 'Further Pure 2', '4B': 'Further Statistics 2', '4C': 'Further Mechanics 2', '4D': 'Decision 2', '21': 'Further Pure 1', '22': 'Further Pure 2', '23': 'Further Statistics 1', '24': 'Further Statistics 2', '25': 'Further Mechanics 1', '26': 'Further Mechanics 2', '27': 'Decision 1', '28': 'Decision 2' };
+const opts = (r) => r.split(' ').filter((c) => !['01', '02'].includes(c)).map((c) => NAMES[c]).join(' + ');
+const latest = b.series[0];
+const routes = latest.alevel.map((r) => r.route);
+---
+<Base title="Edexcel Further Maths grade boundaries by option (9FM0, 8FM0) and grade calculator" description="Edexcel A-level and AS Further Maths grade boundaries for every combination of options, June 2024 to June 2026 and October 2020, with a calculator that turns your four paper marks into a grade." context="grade-boundaries" leadLine="Short of the grade you need? A Further Maths tutor can work out exactly where the marks are.">
+  <h1>Grade boundaries and grade calculator</h1>
+  <p>Edexcel sets a separate set of Further Maths boundaries for each combination of option papers. The A level is out of 300 raw marks (Core Pure 1 and 2 plus two options, 75 marks each); AS is out of 160 (Core Pure 80 plus two options of 40). Boundaries move every year with the difficulty of the papers, so use the last few series as a range, not a target.</p>
+
+  <h2>Grade calculator (A level)</h2>
+  <div class="calc" id="calc">
+    <label>Your options <select id="route">{routes.map((r) => <option value={r}>{opts(r)}</option>)}</select></label>
+    <label>Paper 1 (Core Pure 1) mark <input type="number" min="0" max="75" id="p1" inputmode="numeric" /></label>
+    <label>Paper 2 (Core Pure 2) mark <input type="number" min="0" max="75" id="p2" inputmode="numeric" /></label>
+    <label><span id="l3">First option</span> mark <input type="number" min="0" max="75" id="p3" inputmode="numeric" /></label>
+    <label><span id="l4">Second option</span> mark <input type="number" min="0" max="75" id="p4" inputmode="numeric" /></label>
+    <label>Compare with <select id="series">{b.series.map((s) => <option value={s.series}>{s.series} boundaries</option>)}</select></label>
+    <div class="result" id="result">Enter your marks</div>
+    <div class="muted" id="next"></div>
+  </div>
+
+  {b.series.map((s) => <>
+    <h2>{s.series}: A level (9FM0), out of 300</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Options</th>{grades.map((g) => <th>{g}</th>)}</tr></thead>
+      <tbody>{s.alevel.map((r) => <tr><td>{opts(r.route)}</td>{grades.map((g) => <td>{r[g]}</td>)}</tr>)}</tbody>
+    </table></div>
+    <h3>{s.series}: AS (8FM0), out of 160</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Options</th>{grades.slice(1).map((g) => <th>{g}</th>)}</tr></thead>
+      <tbody>{s.as.map((r) => <tr><td>{opts(r.route)}</td>{grades.slice(1).map((g) => <td>{r[g]}</td>)}</tr>)}</tbody>
+    </table></div>
+  </>)}
+  <p class="muted">{b.source} October 2020 is the autumn series sat in place of the cancelled summer exams; its boundaries are much lower. Other series are on Pearson's grade boundaries page.</p>
+
+  <script define:vars={{ all: b.series, NAMES }}>
+    const $ = (id) => document.getElementById(id);
+    const grades = ['A*', 'A', 'B', 'C', 'D', 'E'];
+    function labels() { const opts = $('route').value.split(' ').slice(2); $('l3').textContent = NAMES[opts[0]]; $('l4').textContent = NAMES[opts[1]]; }
+    function update() {
+      labels();
+      const marks = ['p1', 'p2', 'p3', 'p4'].map((i) => Number($(i).value));
+      if (marks.some((m) => Number.isNaN(m)) || marks.every((m) => m === 0)) { $('result').textContent = 'Enter your marks'; $('next').textContent = ''; return; }
+      const total = marks.reduce((a, c) => a + c, 0);
+      const s = all.find((x) => x.series === $('series').value);
+      const row = s.alevel.find((r) => r.route === $('route').value);
+      if (!row) { $('result').textContent = `${total}/300`; $('next').textContent = 'No boundaries for this combination in that series.'; return; }
+      let grade = 'U';
+      for (const g of grades) { if (total >= row[g]) { grade = g; break; } }
+      $('result').textContent = `${total}/300: grade ${grade} on ${s.series} boundaries`;
+      if (grade === 'A*') { $('next').textContent = `${total - row['A*']} marks above the A* boundary.`; return; }
+      const nextGrade = grade === 'U' ? 'E' : grades[grades.indexOf(grade) - 1];
+      const need = row[nextGrade] - total;
+      $('next').textContent = `${need} more mark${need === 1 ? '' : 's'} for ${nextGrade === 'A' || nextGrade === 'A*' || nextGrade === 'E' ? 'an' : 'a'} ${nextGrade}.`;
+    }
+    ['route', 'series', 'p1', 'p2', 'p3', 'p4'].forEach((i) => $(i).addEventListener('input', update));
+    labels();
+  </script>
+</Base>

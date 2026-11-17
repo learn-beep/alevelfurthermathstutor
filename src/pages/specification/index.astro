@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hint from '../../components/Hint.astro';
+import spec from '../../data/spec.json';
+import { topicByslug, STRANDS } from '../../lib/data';
+const areas = STRANDS;
+const total = spec.reduce((n, s) => n + s.statements.length, 0);
+---
+<Base title="Edexcel Further Maths specification checklist (9FM0): every statement, tickable" description={`All ${total} content statements of the Edexcel A-level Further Maths specification, Core Pure and all eight options, as a tickable checklist with AS and A-level-only marked and links to the past-paper questions for each.`} context="specification" leadLine="Big gaps on the checklist? A tutor can plan the order to close them.">
+  <h1>Specification checklist</h1>
+  <p>Every content statement in the Pearson Edexcel 9FM0 specification: Core Pure, then the eight options. You only need Core Pure and your two options, so tick those. Ticks are saved in this browser only. Each statement links to the past-paper questions that assess it.</p>
+  <p class="muted">Jump to: {areas.map((a, i) => <>{i ? ' · ' : ''}<a href={`#${a.toLowerCase().replace(/ /g, '-')}`}>{a}</a></>)}</p>
+  <Hint id="ticks" text="Ticks are saved in this browser only. The revision planner uses them to pick your weak topics." />
+  <p class="muted"><span id="done">0</span> of {total} ticked · <button class="chip" type="button" id="clear">Clear my ticks</button></p>
+  {areas.map((area) => (
+    <>
+      <h2 class="strand-head" id={area.toLowerCase().replace(/ /g, '-')}>{area}</h2>
+      {spec.filter((s) => s.strand === area).map((s) => (
+        <section>
+          <h3>{s.code} {s.title}</h3>
+          <ul class="spec-list">
+            {s.statements.map((st) => (
+              <li>
+                <label>
+                  <input type="checkbox" data-spec={st.id} />
+                  <span>
+                    <strong><a href={`/spec/${st.id}/`}>{st.id} {st.short}</a></strong>
+                    {st.level && <span class={`pill ${st.level === 'A level only' ? 'pill-hard' : st.level.startsWith('Partly') ? 'pill-medium' : 'pill-easy'}`}>{st.level === 'A level only' ? 'A level only' : st.level.startsWith('Partly') ? 'Partly A level only' : 'AS and A level'}</span>}
+                    <br /><span class="muted small-text">{st.text}</span>
+                    {st.aLevelPart && <><br /><span class="small-text">A-level-only part: {st.aLevelPart}</span></>}
+                    {st.topics.length > 0 && <><br /><span class="small-text">Questions: {st.topics.map((t, i) => <>{i ? ' · ' : ''}<a href={`/questions/${t}/`}>{topicByslug.get(t)?.name ?? t}</a></>)}</span></>}
+                  </span>
+                </label>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </>
+  ))}
+  <script>
+    const KEY = 'fmalt-spec';
+    const boxes = document.querySelectorAll('input[data-spec]');
+    const done = document.getElementById('done');
+    let state = {};
+    try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch {}
+    const paint = () => { let n = 0; boxes.forEach((b) => { b.checked = !!state[b.dataset.spec]; if (b.checked) n++; }); done.textContent = String(n); };
+    boxes.forEach((b) => b.addEventListener('change', () => { state[b.dataset.spec] = b.checked; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} paint(); }));
+    document.getElementById('clear').addEventListener('click', () => { state = {}; try { localStorage.removeItem(KEY); } catch {} paint(); });
+    paint();
+  </script>
+</Base>

@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+---
+<Base title="Edexcel Further Maths mock builder: timed practice papers from real questions" description="Build a timed Edexcel Further Maths mock from real past-paper questions: Core Pure or any of the eight options, AS or A level, 25 to 75 marks, played on screen or printed with the mark schemes." context="mock" leadLine="Want a mock marked properly and gone through? Message us.">
+  <h1>Mini-mock builder</h1>
+  <p>Assembles a paper from real Edexcel Further Maths questions, mixing topics the way the exam does, at exam pace (1.2 minutes a mark: a 75-mark A-level paper is 90 minutes). Play it on screen with the timer, or print it with the mark schemes on the following pages.</p>
+  <div class="panel" id="setup">
+    <h3>Paper</h3>
+    <div class="chips" data-group="area"><button class="chip" type="button" data-v="CP" aria-pressed="true">Core Pure</button><button class="chip" type="button" data-v="FP1">Further Pure 1</button><button class="chip" type="button" data-v="FP2">Further Pure 2</button><button class="chip" type="button" data-v="FS1">Further Statistics 1</button><button class="chip" type="button" data-v="FS2">Further Statistics 2</button><button class="chip" type="button" data-v="FM1">Further Mechanics 1</button><button class="chip" type="button" data-v="FM2">Further Mechanics 2</button><button class="chip" type="button" data-v="D1">Decision 1</button><button class="chip" type="button" data-v="D2">Decision 2</button></div>
+    <h3>Level</h3>
+    <div class="chips" data-group="level"><button class="chip" type="button" data-v="A level" aria-pressed="true">A level (AS and A-level questions)</button><button class="chip" type="button" data-v="AS">AS (AS questions only)</button></div>
+    <h3>Marks</h3>
+    <div class="chips" data-group="marks"><button class="chip" type="button" data-v="25" aria-pressed="true">25 (30 min)</button><button class="chip" type="button" data-v="40">40 (48 min, AS option length)</button><button class="chip" type="button" data-v="75">75 (90 min, A-level paper length)</button></div>
+    <div><button class="btn btn-accent" type="button" id="build">Build my mock</button></div>
+  </div>
+  <div id="paper" hidden>
+    <div class="playbar"><span id="title"></span><span class="timer" id="timer"></span><span><button class="btn" type="button" id="starttimer"><Icon name="timer" />Start timer</button> <button class="btn" type="button" id="print"><Icon name="printer" />Print</button> <button class="btn" type="button" id="share"><Icon name="link" />Copy link</button></span></div>
+    <div id="cards"></div>
+    <div class="btn-row"><button class="btn btn-accent" type="button" id="rebuild">Build another</button></div>
+  </div>
+  <script>
+    import { loadBank, card, shuffle, fmtTime } from '../../scripts/player.js';
+    const $ = (s) => document.querySelector(s);
+    const sel = { area: 'CP', level: 'A level', marks: 25 };
+    const NAMES = { CP: 'Core Pure', FP1: 'Further Pure 1', FP2: 'Further Pure 2', FS1: 'Further Statistics 1', FS2: 'Further Statistics 2', FM1: 'Further Mechanics 1', FM2: 'Further Mechanics 2', D1: 'Decision 1', D2: 'Decision 2' };
+    let bank = null, timer = null, secs = 0;
+    document.querySelectorAll('[data-group]').forEach((g) => g.querySelectorAll('.chip').forEach((b) => b.addEventListener('click', () => { g.querySelectorAll('.chip').forEach((x) => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', 'true'); sel[g.dataset.group] = g.dataset.group === 'marks' ? Number(b.dataset.v) : b.dataset.v; })));
+    loadBank().then((b) => { bank = b; });
+    $('#build').addEventListener('click', () => {
+      if (!bank) return;
+      let pool = shuffle(bank.q.filter((q) => q.c && q.a === sel.area && (sel.level === 'A level' || q.l === 'AS')));
+      const picked = [], seen = {}; let total = 0;
+      const cap = Math.max(2, Math.ceil(sel.marks / 15));
+      for (const q of pool) { if (total >= sel.marks) break; if (q.t.some((t) => (seen[t] || 0) >= cap) && pool.length > 40) continue; if (total + q.m > sel.marks + 3) continue; picked.push(q); q.t.forEach((t) => { seen[t] = (seen[t] || 0) + 1; }); total += q.m; }
+      picked.sort((a, b) => a.m - b.m);
+      $('#setup').hidden = true; $('#paper').hidden = false;
+      $('#title').textContent = `${sel.level} ${NAMES[sel.area]}: ${picked.length} questions, ${total} marks`;
+      secs = Math.round(total * 72); $('#timer').textContent = fmtTime(secs); if (timer) clearInterval(timer);
+      renderPicked(picked);
+      location.hash = 'set=' + picked.map((q) => q.id).join(',');
+      window.scrollTo({ top: 0 });
+    });
+    function renderPicked(picked) { const holder = $('#cards'); holder.innerHTML = ''; picked.forEach((q, n) => { const c = card(q); c.querySelector('.meta strong').textContent = `Q${n + 1} (from ${q.s} ${q.p} Q${q.q})`; holder.appendChild(c); }); }
+    $('#share').addEventListener('click', async () => { const url = location.href.split('#')[0] + location.hash; try { await navigator.clipboard.writeText(url); window.maltToast && window.maltToast('Link copied'); } catch { prompt('Copy this link', url); } });
+    loadBank().then(() => { const m = location.hash.match(/set=([^&]+)/); if (!m || !bank) return; const ids = m[1].split(','); const picked = ids.map((id) => bank.q.find((q) => q.id === id)).filter(Boolean); if (!picked.length) return; const total = picked.reduce((a, q) => a + q.m, 0); $('#setup').hidden = true; $('#paper').hidden = false; $('#title').textContent = `Shared mock: ${picked.length} questions, ${total} marks`; secs = Math.round(total * 72); $('#timer').textContent = fmtTime(secs); renderPicked(picked); });
+    $('#starttimer').addEventListener('click', () => { if (timer) clearInterval(timer); timer = setInterval(() => { secs--; $('#timer').textContent = fmtTime(Math.max(secs, 0)); if (secs <= 0) { clearInterval(timer); $('#timer').textContent = "Time's up"; } }, 1000); });
+    $('#print').addEventListener('click', () => { document.querySelectorAll('#cards img[data-src]').forEach((img) => { img.src = img.dataset.src; img.removeAttribute('data-src'); }); setTimeout(() => window.print(), 300); });
+    $('#rebuild').addEventListener('click', () => { if (timer) clearInterval(timer); $('#paper').hidden = true; $('#setup').hidden = false; window.scrollTo({ top: 0 }); });
+  </script>
+</Base>

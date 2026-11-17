@@ -1,0 +1,2542 @@
+[
+{
+"code": "CP1",
+"title": "Proof",
+"area": "CP",
+"strand": "Core Pure",
+"statements": [
+{
+"id": "CP1.1",
+"short": "Construct proofs using mathematical induction. Contexts include…",
+"text": "Construct proofs using mathematical induction. Contexts include sums of series, divisibility and powers of matrices.",
+"guidance": "To include induction proofs for (i) summation of series, e.g. show Σ(r=1 to n) r³ = ¼n²(n + 1)² or show Σ(r=1 to n) r(r + 1) = n(n + 1)(n + 2)/3; (ii) divisibility, e.g. show 3²ⁿ + 11 is divisible by 4; (iii) matrix products, e.g. show (3 −4; 1 −1)ⁿ = (2n + 1  −4n; n  1 − 2n).",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"proof-by-induction"
+]
+}
+]
+},
+{
+"code": "CP2",
+"title": "Complex numbers",
+"area": "CP",
+"strand": "Core Pure",
+"statements": [
+{
+"id": "CP2.1",
+"short": "Solve any quadratic equation with real coefficients. Solve cubic…",
+"text": "Solve any quadratic equation with real coefficients. Solve cubic or quartic equations with real coefficients.",
+"guidance": "Given sufficient information to deduce at least one root for cubics or at least one complex root or quadratic factor for quartics, for example: (i) f(z) = 2z³ + 5z² + 7z + 10; given that z + 2 is a factor of f(z), use algebra to solve f(z) = 0 completely. (ii) g(x) = x⁴ − x³ + 6x² + 14x − 20; given g(1) = 0 and g(−2) = 0, use algebra to solve g(x) = 0 completely.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"complex-numbers"
+]
+},
+{
+"id": "CP2.2",
+"short": "Add, subtract, multiply and divide complex numbers in the form x +…",
+"text": "Add, subtract, multiply and divide complex numbers in the form x + iy with x and y real. Understand and use the terms ‘real part’ and ‘imaginary part’.",
+"guidance": "Students should know the meaning of the terms, ‘modulus’ and ‘argument’.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"complex-numbers"
+]
+},
+{
+"id": "CP2.3",
+"short": "Understand and use the complex conjugate. Know that non-real roots…",
+"text": "Understand and use the complex conjugate. Know that non-real roots of polynomial equations with real coefficients occur in conjugate pairs.",
+"guidance": "Knowledge that if z₁ is a root of f(z) = 0 then z₁* is also a root.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"complex-numbers"
+]
+},
+{
+"id": "CP2.4",
+"short": "Use and interpret Argand diagrams.",
+"text": "Use and interpret Argand diagrams.",
+"guidance": "Students should be able to represent the sum or difference of two complex numbers on an Argand diagram.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"complex-numbers"
+]
+},
+{
+"id": "CP2.5",
+"short": "Convert between the Cartesian form and the modulus-argument form…",
+"text": "Convert between the Cartesian form and the modulus-argument form of a complex number.",
+"guidance": "Knowledge of radians is assumed.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"modulus-argument-form"
+]
+},
+{
+"id": "CP2.6",
+"short": "Multiply and divide complex numbers in modulus argument form.",
+"text": "Multiply and divide complex numbers in modulus argument form.",
+"guidance": "Knowledge of the results |z₁z₂| = |z₁||z₂|, |z₁/z₂| = |z₁|/|z₂|, arg(z₁z₂) = arg z₁ + arg z₂, arg(z₁/z₂) = arg z₁ − arg z₂. Knowledge of radians and compound angle formulae is assumed.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"modulus-argument-form"
+]
+},
+{
+"id": "CP2.7",
+"short": "Construct and interpret simple loci in the Argand diagram such as…",
+"text": "Construct and interpret simple loci in the Argand diagram such as |z − a| > r and arg(z − a) = θ.",
+"guidance": "To include loci such as |z − a| = b, |z − a| = |z − b|, arg(z − a) = β, and regions such as |z − a| ≤ |z − b|, |z − a| ≤ b, α < arg(z − a) < β. Knowledge of radians is assumed.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"loci-in-the-argand-diagram"
+]
+},
+{
+"id": "CP2.8",
+"short": "Understand de Moivre’s theorem and use it to find multiple angle…",
+"text": "Understand de Moivre’s theorem and use it to find multiple angle formulae and sums of series.",
+"guidance": "To include using the results z + 1/z = 2 cos θ and z − 1/z = 2i sin θ to find cos pθ, sin qθ and tan rθ in terms of powers of sin θ, cos θ and tan θ, and powers of sin θ, cos θ and tan θ in terms of multiple angles. For sums of series, students should be able to show that, for example, 1 + z + z² + … + zⁿ⁻¹ = 1 + i cot(π/2n) where z = cos(π/n) + i sin(π/n) and n is a positive integer.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"de-moivres-theorem"
+]
+},
+{
+"id": "CP2.9",
+"short": "Know and use the definition e^(iθ) = cos θ + i sin θ and the form…",
+"text": "Know and use the definition e^(iθ) = cos θ + i sin θ and the form z = re^(iθ).",
+"guidance": "Students should be familiar with cos θ = ½(e^(iθ) + e^(−iθ)) and sin θ = (1/2i)(e^(iθ) − e^(−iθ)).",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"de-moivres-theorem"
+]
+},
+{
+"id": "CP2.10",
+"short": "Find the n distinct nth roots of re^(iθ) for r ≠ 0 and know that…",
+"text": "Find the n distinct nth roots of re^(iθ) for r ≠ 0 and know that they form the vertices of a regular n-gon in the Argand diagram.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"roots-of-unity"
+]
+},
+{
+"id": "CP2.11",
+"short": "Use complex roots of unity to solve geometric problems.",
+"text": "Use complex roots of unity to solve geometric problems.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"roots-of-unity"
+]
+}
+]
+},
+{
+"code": "CP3",
+"title": "Matrices",
+"area": "CP",
+"strand": "Core Pure",
+"statements": [
+{
+"id": "CP3.1",
+"short": "Add, subtract and multiply conformable matrices. Multiply a matrix…",
+"text": "Add, subtract and multiply conformable matrices. Multiply a matrix by a scalar.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"matrices"
+]
+},
+{
+"id": "CP3.2",
+"short": "Understand and use zero and identity matrices.",
+"text": "Understand and use zero and identity matrices.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"matrices"
+]
+},
+{
+"id": "CP3.3",
+"short": "Use matrices to represent linear transformations in 2-D.…",
+"text": "Use matrices to represent linear transformations in 2-D. Successive transformations. Single transformations in 3-D.",
+"guidance": "For 2-D, identification and use of the matrix representation of single and combined transformations from: reflection in coordinate axes and lines y = ± x, rotation through any angle about (0, 0),stretches parallel to the x-axis and y-axis, and enlargement about centre (0, 0), with scale factork, (k ≠ 0), where k ∈ℝ. Knowledge that the transformation represented by AB is the transformation represented by B followed by the transformation represented by A. 3-D transformationsconfined to reflection in one of x = 0, y = 0, z = 0or rotation about oneof the coordinate axes. Knowledge of 3-D vectors is assumed.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"linear-transformations"
+]
+},
+{
+"id": "CP3.4",
+"short": "Find invariant points and lines for a linear transformation.",
+"text": "Find invariant points and lines for a linear transformation.",
+"guidance": "For a given transformation, students should be able to find the coordinates of invariant points and the equations of invariant lines.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"linear-transformations"
+]
+},
+{
+"id": "CP3.5",
+"short": "Calculate determinants of 2 x 2 and 3 x 3 matrices and interpret…",
+"text": "Calculate determinants of 2 x 2 and 3 x 3 matrices and interpret as scale factors, including the effect on orientation.",
+"guidance": "Idea of the determinant as an area scale factor in transformations.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"matrices"
+]
+},
+{
+"id": "CP3.6",
+"short": "Understand and use singular and non-singular matrices. Properties…",
+"text": "Understand and use singular and non-singular matrices. Properties of inverse matrices. Calculate and use the inverse of non-singular 2 x 2 matrices and 3 x 3 matrices.",
+"guidance": "Understanding the process of finding the inverse of a matrix is required. Students should be able to use a calculator to calculate the inverse of a matrix.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"matrices"
+]
+},
+{
+"id": "CP3.7",
+"short": "Solve three linear simultaneous equations in three variables by…",
+"text": "Solve three linear simultaneous equations in three variables by use of the inverse matrix.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"three-equations-three-unknowns"
+]
+},
+{
+"id": "CP3.8",
+"short": "Interpret geometrically the solution and failure of solution of…",
+"text": "Interpret geometrically the solution and failure of solution of three simultaneous linear equations.",
+"guidance": "Students should be aware of the different possible geometrical configurations of three planes, including cases where the planes, (i)meet in a point (ii)form a sheaf (iii)form a prism or are otherwise inconsistent",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"three-equations-three-unknowns"
+]
+}
+]
+},
+{
+"code": "CP4",
+"title": "Further algebra and functions",
+"area": "CP",
+"strand": "Core Pure",
+"statements": [
+{
+"id": "CP4.1",
+"short": "Understand and use the relationship between roots and coefficients…",
+"text": "Understand and use the relationship between roots and coefficients of polynomial equations up to quartic equations.",
+"guidance": "For example, given a cubic polynomial equation with roots α, β and γ students should be able to evaluate expressions such as (i) α² + β² + γ², (ii) 1/α + 1/β + 1/γ, (iii) (3 + α)(3 + β)(3 + γ), (iv) α³ + β³ + γ³.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"roots-of-polynomials"
+]
+},
+{
+"id": "CP4.2",
+"short": "Form a polynomial equation whose roots are a linear…",
+"text": "Form a polynomial equation whose roots are a linear transformationof the roots of a given polynomial equation (of at least cubic degree).",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"roots-of-polynomials"
+]
+},
+{
+"id": "CP4.3",
+"short": "Understand and use formulae for the sums of integers, squares and…",
+"text": "Understand and use formulae for the sums of integers, squares and cubes and use these to sum other series.",
+"guidance": "For example, students should be able to sum series such as Σ(r=1 to n) r²(r + 2).",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"series-and-method-of-differences"
+]
+},
+{
+"id": "CP4.4",
+"short": "Understand and use the method of differences for summation of…",
+"text": "Understand and use the method of differences for summation of series including use of partial fractions.",
+"guidance": "Students should be able to sum series such as Σ(r=1 to n) 1/(r(r + 1)) by using partial fractions such as 1/(r(r + 1)) = 1/r − 1/(r + 1).",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"series-and-method-of-differences"
+]
+},
+{
+"id": "CP4.5",
+"short": "Find the Maclaurin series of a function including the general term.",
+"text": "Find the Maclaurin series of a function including the general term.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"maclaurin-series"
+]
+},
+{
+"id": "CP4.6",
+"short": "Recognise and use the Maclaurin series for eˣ, ln(1 + x), sin x,…",
+"text": "Recognise and use the Maclaurin series for eˣ, ln(1 + x), sin x, cos x and (1 + x)ⁿ, and be aware of the range of values of x for which they are valid (proof not required).",
+"guidance": "To include the derivation of the series expansions of compound functions.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"maclaurin-series"
+]
+}
+]
+},
+{
+"code": "CP5",
+"title": "Further calculus",
+"area": "CP",
+"strand": "Core Pure",
+"statements": [
+{
+"id": "CP5.1",
+"short": "Derive formulae for and calculate volumes of revolution.",
+"text": "Derive formulae for and calculate volumes of revolution.",
+"guidance": "Both π∫y² dx and π∫x² dy are required. Students should be able to find a volume of revolution given either Cartesian equations or parametric equations.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"volumes-of-revolution"
+]
+},
+{
+"id": "CP5.2",
+"short": "Evaluate improper integrals where either the integrand is…",
+"text": "Evaluate improper integrals where either the integrand is undefined at a value in the range of integration or the range of integration extends to infinity.",
+"guidance": "For example, ∫(0 to ∞) e^(−x) dx, ∫(0 to 2) 1/√x dx.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"improper-integrals-and-mean-value"
+]
+},
+{
+"id": "CP5.3",
+"short": "Understand and evaluate the mean value of a function.",
+"text": "Understand and evaluate the mean value of a function.",
+"guidance": "Students should be familiar with the mean value of a function f(x) as (1/(b − a)) ∫(a to b) f(x) dx.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"improper-integrals-and-mean-value"
+]
+},
+{
+"id": "CP5.4",
+"short": "Integrate using partial fractions.",
+"text": "Integrate using partial fractions.",
+"guidance": "Extend to quadratic factors ax² + c in the denominator.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"partial-fractions-integration"
+]
+},
+{
+"id": "CP5.5",
+"short": "Differentiate inverse trigonometric functions.",
+"text": "Differentiate inverse trigonometric functions.",
+"guidance": "For example, students should be able to differentiate expressions such as arcsin x + x√(1 − x²) and ½ arctan x².",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"inverse-trig-calculus"
+]
+},
+{
+"id": "CP5.6",
+"short": "Integrate functions of the form (a² − x²)^(−1/2) and (a² +…",
+"text": "Integrate functions of the form (a² − x²)^(−1/2) and (a² + x²)^(−1) and be able to choose trigonometric substitutions to integrate associated functions.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"inverse-trig-calculus"
+]
+}
+]
+},
+{
+"code": "CP6",
+"title": "Further vectors",
+"area": "CP",
+"strand": "Core Pure",
+"statements": [
+{
+"id": "CP6.1",
+"short": "Understand and use the vector and Cartesian forms of an equation…",
+"text": "Understand and use the vector and Cartesian forms of an equation of a straight line in 3-D.",
+"guidance": "The forms r = a + λb and (x − a₁)/b₁ = (y − a₂)/b₂ = (z − a₃)/b₃. Find the point of intersection of two straight lines given in vector form. Students should be familiar with the concept of skew lines and parallel lines.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"vectors-lines-and-planes"
+]
+},
+{
+"id": "CP6.2",
+"short": "Understand and use the vector and Cartesian forms of the equation…",
+"text": "Understand and use the vector and Cartesian forms of the equation of a plane.",
+"guidance": "The forms r = a + λb + μc and ax + by + cz = d.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"vectors-lines-and-planes"
+]
+},
+{
+"id": "CP6.3",
+"short": "Calculate the scalar product and use it to express the equation of…",
+"text": "Calculate the scalar product and use it to express the equation of a plane, and to calculate the angle between two lines, the angle between two planes and the angle between a line and a plane.",
+"guidance": "a.b = |a||b| cos θ. The form r.n = k for a plane.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"vectors-lines-and-planes"
+]
+},
+{
+"id": "CP6.4",
+"short": "Check whether vectors are perpendicular by using the scalar product.",
+"text": "Check whether vectors are perpendicular by using the scalar product.",
+"guidance": "Knowledge of the property that a.b = 0 if the vectors a and b are perpendicular.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"vectors-lines-and-planes"
+]
+},
+{
+"id": "CP6.5",
+"short": "Find the intersection of a line and a plane. Calculate the…",
+"text": "Find the intersection of a line and a plane. Calculate the perpendicular distance between two lines, from a point to a line and from a point to a plane.",
+"guidance": "The perpendicular distance from (α, β, γ) to n₁x + n₂y + n₃z + d = 0 is |n₁α + n₂β + n₃γ + d| / √(n₁² + n₂² + n₃²).",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"vectors-intersections-and-distances"
+]
+}
+]
+},
+{
+"code": "CP7",
+"title": "Polar coordinates",
+"area": "CP",
+"strand": "Core Pure",
+"statements": [
+{
+"id": "CP7.1",
+"short": "Understand and use polar coordinates and be able to convert…",
+"text": "Understand and use polar coordinates and be able to convert between polar and Cartesian coordinates.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"polar-coordinates"
+]
+},
+{
+"id": "CP7.2",
+"short": "Sketch curves with r given as a function of θ, including use of…",
+"text": "Sketch curves with r given as a function of θ, including use of trigonometric functions.",
+"guidance": "The sketching of curves such as r = p sec(α − θ), r = a, r = 2a cos θ, r = kθ, r = a(1 ± cos θ), r = a(3 + 2 cos θ), r = a cos 2θ and r² = a² cos 2θ may be set.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"polar-coordinates"
+]
+},
+{
+"id": "CP7.3",
+"short": "Find the area enclosed by a polar curve.",
+"text": "Find the area enclosed by a polar curve.",
+"guidance": "Use of the formula ½∫(α to β) r² dθ for area. The ability to find tangents parallel to, or at right angles to, the initial line is expected.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"polar-coordinates"
+]
+}
+]
+},
+{
+"code": "CP8",
+"title": "Hyperbolic functions",
+"area": "CP",
+"strand": "Core Pure",
+"statements": [
+{
+"id": "CP8.1",
+"short": "Understand the definitions of hyperbolic functions sinh x, cosh x…",
+"text": "Understand the definitions of hyperbolic functions sinh x, cosh x and tanh x, including their domains and ranges, and be able to sketch their graphs.",
+"guidance": "For example, cosh x = ½(eˣ + e⁻ˣ).",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"hyperbolic-functions"
+]
+},
+{
+"id": "CP8.2",
+"short": "Differentiate and integrate hyperbolic functions.",
+"text": "Differentiate and integrate hyperbolic functions.",
+"guidance": "For example, differentiate tanh 3x, x sinh² x, cosh 2x/√(x + 1).",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"hyperbolic-functions"
+]
+},
+{
+"id": "CP8.3",
+"short": "Understand and be able to use the definitions of the inverse…",
+"text": "Understand and be able to use the definitions of the inverse hyperbolic functions and their domains and ranges.",
+"guidance": "arsinh x = ln[x + √(x² + 1)]; arcosh x = ln[x + √(x² − 1)], x ≥ 1; artanh x = ½ ln[(1 + x)/(1 − x)], −1 < x < 1.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"hyperbolic-functions"
+]
+},
+{
+"id": "CP8.4",
+"short": "Derive and use the logarithmic forms of the inverse hyperbolic…",
+"text": "Derive and use the logarithmic forms of the inverse hyperbolic functions.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"hyperbolic-functions"
+]
+},
+{
+"id": "CP8.5",
+"short": "Integrate functions of the form (x² + a²)^(−1/2) and (x² −…",
+"text": "Integrate functions of the form (x² + a²)^(−1/2) and (x² − a²)^(−1/2) and be able to choose substitutions to integrate associated functions.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"hyperbolic-functions"
+]
+}
+]
+},
+{
+"code": "CP9",
+"title": "Differential equations",
+"area": "CP",
+"strand": "Core Pure",
+"statements": [
+{
+"id": "CP9.1",
+"short": "Find and use an integrating factor to solve differential equations…",
+"text": "Find and use an integrating factor to solve differential equations of form dy/dx + P(x)y = Q(x) and recognise when it is appropriate to do so.",
+"guidance": "The integrating factor e^(∫P(x)dx) may be quoted without proof.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"first-order-differential-equations"
+]
+},
+{
+"id": "CP9.2",
+"short": "Find both general and particular solutions to differential equations.",
+"text": "Find both general and particular solutions to differential equations.",
+"guidance": "Students will be expected to sketch members of the family of solution curves.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"first-order-differential-equations"
+]
+},
+{
+"id": "CP9.3",
+"short": "Use differential equations in modelling in kinematics and in other…",
+"text": "Use differential equations in modelling in kinematics and in other contexts.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"first-order-differential-equations"
+]
+},
+{
+"id": "CP9.4",
+"short": "Solve differential equations of form y″ + ay′ + by = 0 where a and…",
+"text": "Solve differential equations of form y″ + ay′ + by = 0 where a and b are constants by using the auxiliary equation.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"second-order-differential-equations"
+]
+},
+{
+"id": "CP9.5",
+"short": "Solve differential equations of form y″ + ay′ + by = f(x) where a…",
+"text": "Solve differential equations of form y″ + ay′ + by = f(x) where a and b are constants by solving the homogeneous case and adding a particular integral to the complementary function (in cases where f(x) is a polynomial, exponential or trigonometric function).",
+"guidance": "f(x) will have one of the forms ke^(px), A + Bx, p + qx + cx² or m cos ωx + n sin ωx.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"second-order-differential-equations"
+]
+},
+{
+"id": "CP9.6",
+"short": "Understand and use the relationship between the cases when the…",
+"text": "Understand and use the relationship between the cases when the discriminant of the auxiliary equation is positive, zero and negative and the form of solution of the differential equation.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"second-order-differential-equations"
+]
+},
+{
+"id": "CP9.7",
+"short": "Solve the equation for simple harmonic motion ẍ = −ω²x and relate…",
+"text": "Solve the equation for simple harmonic motion ẍ = −ω²x and relate the solution to the motion.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"simple-harmonic-motion-and-damping"
+]
+},
+{
+"id": "CP9.8",
+"short": "Model damped oscillations using second order differential…",
+"text": "Model damped oscillations using second order differential equations and interpret their solutions.",
+"guidance": "Damped harmonic motion, with resistance varying as the derivative of the displacement, is expected. Problems may be set on forced vibration.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"simple-harmonic-motion-and-damping"
+]
+},
+{
+"id": "CP9.9",
+"short": "Analyse and interpret models of situations with one independent…",
+"text": "Analyse and interpret models of situations with one independent variable and two dependent variables as a pair of coupled first order simultaneous equations and be able to solve them, for example predator-prey models.",
+"guidance": "Restricted to coupled first order linear equations of the form dx/dt = ax + by + f(t), dy/dt = cx + dy + g(t).",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"coupled-differential-equations"
+]
+}
+]
+},
+{
+"code": "FP1.1",
+"title": "Further Trigonometry",
+"area": "FP1",
+"strand": "Further Pure 1",
+"statements": [
+{
+"id": "FP1.1.1",
+"short": "The t-formulae",
+"text": "The t-formulae",
+"guidance": "The derivation and use of sin θ ≡ 2t/(1 + t²), cos θ ≡ (1 − t²)/(1 + t²), tan θ ≡ 2t/(1 − t²), where t = tan(θ/2).",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"t-formulae"
+]
+},
+{
+"id": "FP1.1.2",
+"short": "Applications of t-formulae to trigonometric identities",
+"text": "Applications of t-formulae to trigonometric identities",
+"guidance": "E.g. show that (1 + cosec θ)/cot θ ≡ (1 + tan(θ/2))/(1 − tan(θ/2)).",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"t-formulae"
+]
+},
+{
+"id": "FP1.1.3",
+"short": "Applications of t-formulae to solve trigonometric equations",
+"text": "Applications of t-formulae to solve trigonometric equations",
+"guidance": "E.g. the solution of equations of the form a cos x + b sin x = c",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"t-formulae"
+]
+}
+]
+},
+{
+"code": "FP1.2",
+"title": "Further calculus",
+"area": "FP1",
+"strand": "Further Pure 1",
+"statements": [
+{
+"id": "FP1.2.1",
+"short": "Derivation and use of Taylor series.",
+"text": "Derivation and use of Taylor series.",
+"guidance": "The derivation, for example, of the expansion of sin x in ascending powers of (x −π) up to and including the term in (x −π )³.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"taylor-series-leibnitz-lhospital"
+]
+},
+{
+"id": "FP1.2.2",
+"short": "Use of series expansions to find limits.",
+"text": "Use of series expansions to find limits.",
+"guidance": "E.g. lim(x→0) (x − arctan x)/x³, lim(x→0) (e^(2x²) − 1)/x².",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"taylor-series-leibnitz-lhospital"
+]
+},
+{
+"id": "FP1.2.3",
+"short": "Leibnitz’s theorem.",
+"text": "Leibnitz’s theorem.",
+"guidance": "Leibnitz’s theorem for differentiating products.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"taylor-series-leibnitz-lhospital"
+]
+},
+{
+"id": "FP1.2.4",
+"short": "L’Hospital’s Rule.",
+"text": "L’Hospital’s Rule.",
+"guidance": "The use of derivatives to evaluate limits of indeterminate forms. Repeated applications and/or substitutions may be required. E.g. lim(x→0) (2 sin x − sin 2x)/(x − sin x), lim(x→∞) (1 + a/x)ˣ.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"taylor-series-leibnitz-lhospital"
+]
+},
+{
+"id": "FP1.2.5",
+"short": "The Weierstrass substitution for integration.",
+"text": "The Weierstrass substitution for integration.",
+"guidance": "The use of tangent half angle substitutions to find definite and indefinite integrals. E.g. ∫cosec x dx, ∫(π/3 to π/2) 1/(1 + sin x − cos x) dx using t = tan(x/2).",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"taylor-series-leibnitz-lhospital"
+]
+}
+]
+},
+{
+"code": "FP1.3",
+"title": "Further differential equations",
+"area": "FP1",
+"strand": "Further Pure 1",
+"statements": [
+{
+"id": "FP1.3.1",
+"short": "Use of Taylor series method for series solution of differential…",
+"text": "Use of Taylor series method for series solution of differential equations.",
+"guidance": "For example, derivation of the series solution in powers of x, as far as the term in x⁴, of the differential equation d²y/dx² + x dy/dx + y = 0, where y = 1, dy/dx = 0 at x = 0.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"further-differential-equations"
+]
+},
+{
+"id": "FP1.3.2",
+"short": "Differential equations reducible by means of a given substitution.",
+"text": "Differential equations reducible by means of a given substitution.",
+"guidance": "Differential equations reducible to the types as specified in section 9 of the A level Further Pure Mathematics content for papers 1 and 2.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"further-differential-equations"
+]
+}
+]
+},
+{
+"code": "FP1.4",
+"title": "Coordinate systems",
+"area": "FP1",
+"strand": "Further Pure 1",
+"statements": [
+{
+"id": "FP1.4.1",
+"short": "Cartesian and parametric equations for the parabola and…",
+"text": "Cartesian and parametric equations for the parabola and rectangular hyperbola, ellipse and hyperbola.",
+"guidance": "Students should be familiar with the equations: y² = 4ax; x = at², y = 2at. x²/a² + y²/b² = 1; x = a cos t, y = b sin t. x²/a² − y²/b² = 1; x = a sec t, y = b tan t; x = a cosh t, y = b sinh t.",
+"level": "Partly A level only",
+"aLevelPart": "",
+"topics": [
+"conic-sections"
+]
+},
+{
+"id": "FP1.4.2",
+"short": "The focus-directrix properties of the parabola, ellipse and…",
+"text": "The focus-directrix properties of the parabola, ellipse and hyperbola, including the eccentricity.",
+"guidance": "For example, students should know that, for the ellipse b² = a²(1 − e²), the foci are (ae, 0) and (−ae, 0) and the equations of the directrices are x = +a/e and x = −a/e.",
+"level": "Partly A level only",
+"aLevelPart": "",
+"topics": [
+"conic-sections"
+]
+},
+{
+"id": "FP1.4.3",
+"short": "Tangents and normals to these curves.",
+"text": "Tangents and normals to these curves.",
+"guidance": "The condition for y = mx + c to be a tangent to these curves is expected to be known. Students are expected to be able to use algebraic differentiation to find dy/dx for these curves.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"conic-sections"
+]
+},
+{
+"id": "FP1.4.4",
+"short": "Loci problems.",
+"text": "Loci problems.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"conic-sections"
+]
+}
+]
+},
+{
+"code": "FP1.5",
+"title": "Further vectors",
+"area": "FP1",
+"strand": "Further Pure 1",
+"statements": [
+{
+"id": "FP1.5.1",
+"short": "The vector product a × b of two vectors.",
+"text": "The vector product a × b of two vectors.",
+"guidance": "To include the interpretation of |a × b| as an area.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"vector-product"
+]
+},
+{
+"id": "FP1.5.2",
+"short": "The scalar triple product a.b × c",
+"text": "The scalar triple product a.b × c",
+"guidance": "Students should be able to use the scalar triple product to find the volume of a tetrahedron and a parallelepiped.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"vector-product"
+]
+},
+{
+"id": "FP1.5.3",
+"short": "Applications of vectors to three dimensional geometry involving…",
+"text": "Applications of vectors to three dimensional geometry involving points, lines and planes.",
+"guidance": "To include the equation of a line in the form (r – a) × b = 0. Direction ratios and direction cosines of a line.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"vector-product"
+]
+}
+]
+},
+{
+"code": "FP1.6",
+"title": "Further numerical methods",
+"area": "FP1",
+"strand": "Further Pure 1",
+"statements": [
+{
+"id": "FP1.6.1",
+"short": "Numerical solution of first order and second order differential…",
+"text": "Numerical solution of first order and second order differential equations.",
+"guidance": "The approximations (dy/dx)ₙ ≈ (yₙ₊₁ − yₙ)/h, (dy/dx)ₙ ≈ (yₙ₊₁ − yₙ₋₁)/2h, (d²y/dx²)ₙ ≈ (yₙ₊₁ − 2yₙ + yₙ₋₁)/h².",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"numerical-methods-fp1"
+]
+},
+{
+"id": "FP1.6.2",
+"short": "Simpson’s rule.",
+"text": "Simpson’s rule.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"numerical-methods-fp1"
+]
+}
+]
+},
+{
+"code": "FP1.7",
+"title": "Inequalities",
+"area": "FP1",
+"strand": "Further Pure 1",
+"statements": [
+{
+"id": "FP1.7.1",
+"short": "The manipulation and solution of algebraic inequalities and…",
+"text": "The manipulation and solution of algebraic inequalities and inequations, including those involving the modulus sign.",
+"guidance": "The solution of inequalities such as 1/(x − a) > x/(x − b), |x² − 1| > 2(x + 1).",
+"level": "Partly A level only",
+"aLevelPart": "",
+"topics": [
+"further-inequalities"
+]
+}
+]
+},
+{
+"code": "FP2.1",
+"title": "Groups",
+"area": "FP2",
+"strand": "Further Pure 2",
+"statements": [
+{
+"id": "FP2.1.1",
+"short": "The Axioms of a group.",
+"text": "The Axioms of a group.",
+"guidance": "The terms ‘binary operation, closure, associativity, identity and inverse’.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"groups"
+]
+},
+{
+"id": "FP2.1.2",
+"short": "Examples of groups. Cayley tables. Cyclic groups.",
+"text": "Examples of groups. Cayley tables. Cyclic groups.",
+"guidance": "For example, symmetries of geometrical figures, non-singular matrices, integers modulo n with operation addition, and/or multiplication permutation groups.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"groups"
+]
+},
+{
+"id": "FP2.1.3",
+"short": "The order of a group and the order of an element. Subgroups.",
+"text": "The order of a group and the order of an element. Subgroups.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"groups"
+]
+},
+{
+"id": "FP2.1.4",
+"short": "Lagrange’s theorem.",
+"text": "Lagrange’s theorem.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"groups"
+]
+},
+{
+"id": "FP2.1.5",
+"short": "Isomorphism.",
+"text": "Isomorphism.",
+"guidance": "Isomorphisms will be restricted to groups that have a maximum order of 8.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"groups"
+]
+}
+]
+},
+{
+"code": "FP2.2",
+"title": "Further calculus",
+"area": "FP2",
+"strand": "Further Pure 2",
+"statements": [
+{
+"id": "FP2.2.1",
+"short": "Further Integration — Reduction formulae.",
+"text": "Further Integration — Reduction formulae.",
+"guidance": "Students should be able to derive formulae such as: nIₙ = (n − 1)Iₙ₋₂, n ≥ 2, for Iₙ = ∫(0 to π/2) sinⁿx dx; Iₙ₊₂ = 2 sin((n + 1)x)/(n + 1) + Iₙ for Iₙ = ∫ (sin nx/sin x) dx [CP1].",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"reduction-formulae-arc-length"
+]
+},
+{
+"id": "FP2.2.2",
+"short": "The calculation of arc length and the area of a surface of revolution.",
+"text": "The calculation of arc length and the area of a surface of revolution.",
+"guidance": "The equation of the curve may be given in Cartesian, parametric or polar form.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"reduction-formulae-arc-length"
+]
+}
+]
+},
+{
+"code": "FP2.3",
+"title": "Further matrix algebra",
+"area": "FP2",
+"strand": "Further Pure 2",
+"statements": [
+{
+"id": "FP2.3.1",
+"short": "Eigenvalues and eigenvectors of 2 × 2 and 3 × 3 matrices.",
+"text": "Eigenvalues and eigenvectors of 2 × 2 and 3 × 3 matrices.",
+"guidance": "Understand the term characteristic equation for a 2 × 2 matrix. Repeated eigenvalues and complex eigenvalues. Normalised vectors may be required.",
+"level": "Partly A level only",
+"aLevelPart": "",
+"topics": [
+"eigenvalues-and-eigenvectors"
+]
+},
+{
+"id": "FP2.3.2",
+"short": "Reduction of matrices to diagonal form.",
+"text": "Reduction of matrices to diagonal form.",
+"guidance": "Students should be able to find a matrix P such that P⁻¹AP is diagonal. Symmetric matrices and orthogonal diagonalisation.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"eigenvalues-and-eigenvectors"
+]
+},
+{
+"id": "FP2.3.3",
+"short": "The use of the Cayley-Hamilton theorem.",
+"text": "The use of the Cayley-Hamilton theorem.",
+"guidance": "Students should understand and be able to use the fact that, every 2×2 or 3×3 matrix satisfies its own characteristic equation.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"eigenvalues-and-eigenvectors"
+]
+}
+]
+},
+{
+"code": "FP2.4",
+"title": "Further complex numbers",
+"area": "FP2",
+"strand": "Further Pure 2",
+"statements": [
+{
+"id": "FP2.4.1",
+"short": "Further loci and regions in the Argand diagram.",
+"text": "Further loci and regions in the Argand diagram.",
+"guidance": "To include loci such as |z − a| = k|z − b|, arg((z − a)/(z − b)) = β and regions such as α ≤ arg(z − z₁) ≤ β and p ≤ Re(z) ≤ q.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"complex-transformations"
+]
+},
+{
+"id": "FP2.4.2",
+"short": "Elementary transformations from the z-plane to the w-plane.",
+"text": "Elementary transformations from the z-plane to the w-plane.",
+"guidance": "Transformations such as w = z² and w = (az + b)/(cz + d), where a, b, c, d ∈ ℂ, may be set.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"complex-transformations"
+]
+}
+]
+},
+{
+"code": "FP2.5",
+"title": "Number theory",
+"area": "FP2",
+"strand": "Further Pure 2",
+"statements": [
+{
+"id": "FP2.5.1",
+"short": "An understanding of the division theorem and its application to…",
+"text": "An understanding of the division theorem and its application to the Euclidean Algorithm and congruences.",
+"guidance": "Students should be able to apply the algorithm to find the highest common factor of two numbers.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"number-theory"
+]
+},
+{
+"id": "FP2.5.2",
+"short": "Bezout's identity.",
+"text": "Bezout's identity.",
+"guidance": "Students should be able to use back substitution to identity the Bezout's identity for two numbers.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"number-theory"
+]
+},
+{
+"id": "FP2.5.3",
+"short": "Modular arithmetic. Understanding what is meant by two integers a…",
+"text": "Modular arithmetic. Understanding what is meant by two integers a and b to be congruent modulo an integer n. Properties of congruences.",
+"guidance": "The notation a ≡ b (mod n) is expected. Knowledge of the following properties: a ≡ a (mod n) if a ≡ b (mod n) then b ≡ a (mod n) if a≡ b (mod n) and b ≡ c (mod n) then a≡ c (mod n) Addition and subtraction laws for congruences. Multiplication and power laws.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"number-theory"
+]
+},
+{
+"id": "FP2.5.4",
+"short": "Fermat's Little Theorem.",
+"text": "Fermat's Little Theorem.",
+"guidance": "For example, students should be able to find the least positive residue of 4²⁰ modulo 7. Proof is not required.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"number-theory"
+]
+},
+{
+"id": "FP2.5.5",
+"short": "Divisibility Tests.",
+"text": "Divisibility Tests.",
+"guidance": "For divisibility by 2, 3, 4, 5, 6, 9, 10 and 11.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"number-theory"
+]
+},
+{
+"id": "FP2.5.6",
+"short": "Solution of congruence equations.",
+"text": "Solution of congruence equations.",
+"guidance": "Conditions under which solutions exist should be known. Use of Bezout's identity to find multiplicative inverses.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"number-theory"
+]
+},
+{
+"id": "FP2.5.7",
+"short": "Combinatorics: counting problems, permutations and combinations.",
+"text": "Combinatorics: counting problems, permutations and combinations.",
+"guidance": "The multiplicative principle of counting. Set notation is expected; the number of subsets of a set should be known. Addition and subtraction principles. Students should, for example, be able to determine the number of positive integers less than 1000 containing the digit 3 (at least once). Understanding bothnPand ⁿCrand when r to use them. For example, to determine how many ways there are to select a team of 11 players from a squad of 21 (a) regardless of playing positions and (b) if positions matter",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"combinatorics"
+]
+}
+]
+},
+{
+"code": "FP2.6",
+"title": "Further sequences and series",
+"area": "FP2",
+"strand": "Further Pure 2",
+"statements": [
+{
+"id": "FP2.6.1",
+"short": "First and second order recurrence relations.",
+"text": "First and second order recurrence relations.",
+"guidance": "Equations of the form uₙ₊₁ + f(n)uₙ = g(n) and uₙ₊₂ + f(n)uₙ₊₁ + g(n)uₙ = h(n).",
+"level": "Partly A level only",
+"aLevelPart": "",
+"topics": [
+"recurrence-relations-fp2"
+]
+},
+{
+"id": "FP2.6.2",
+"short": "The solution of recurrence relations to obtain closed forms.",
+"text": "The solution of recurrence relations to obtain closed forms.",
+"guidance": "Students should be able to solve relations such as: uₙ₊₁ − 5uₙ = 8, u₁ = 1; 2uₙ₊₂ + 7uₙ₊₁ − 15uₙ = 6, u₁ = 10, u₂ = −17. The terms particular solution, complementary function and auxiliary equation should be known. Use of recurrence relations to model applications, e.g. population growth.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"recurrence-relations-fp2"
+]
+},
+{
+"id": "FP2.6.3",
+"short": "Proof by induction of closed forms.",
+"text": "Proof by induction of closed forms.",
+"guidance": "For example, if uₙ₊₁ − 3uₙ = 4 with u₁ = 1, prove by mathematical induction that uₙ = 3ⁿ − 2.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"recurrence-relations-fp2"
+]
+}
+]
+},
+{
+"code": "FS1.1",
+"title": "Discrete probability distributions",
+"area": "FS1",
+"strand": "Further Statistics 1",
+"statements": [
+{
+"id": "FS1.1.1",
+"short": "Calculation of the mean and variance of discrete probability…",
+"text": "Calculation of the mean and variance of discrete probability distributions. Extension of expected value function to include E(g(X))",
+"guidance": "Use of E(X) = µ = ∑xP(X = x) and Var(X) = σ² = ∑x²P(X = x) – µ² The formulae used to define g(x) will be consistent with the level required in A level Mathematics and A level Further Mathematics. Questions may require candidates to use these calculations to assess the suitability of models.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"discrete-random-variables"
+]
+}
+]
+},
+{
+"code": "FS1.2",
+"title": "Poisson & binomial distributions",
+"area": "FS1",
+"strand": "Further Statistics 1",
+"statements": [
+{
+"id": "FS1.2.1",
+"short": "The Poisson distribution The additive property of Poisson…",
+"text": "The Poisson distribution The additive property of Poisson distributions",
+"guidance": "Students will be expected to use this distribution to model a real-world situation and to comment critically on the appropriateness. Students will be expected to use their calculators to calculate probabilities including cumulative probabilities. Students will be expected to use the additive property of the Poisson distribution. E.g. if X= the number of events per minute and X∼ Po(λ), then the number of events per 5 minutes ∼ Po(5λ). If Xand Y are independent random variables with X ~ Po(λ) and Y ~ Po(µ), then X + Y ~ Po(λ + µ ) No proofs are required.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"poisson-distribution"
+]
+},
+{
+"id": "FS1.2.2",
+"short": "The mean and variance of the binomial distribution and the Poisson…",
+"text": "The mean and variance of the binomial distribution and the Poisson distribution.",
+"guidance": "Knowledge and use of : If X ~ B(n, p), then E(X) = np and Var(X) = np(1 – p) If Y ~ Po(λ), then E(Y) = λ and Var(Y) = λ Derivations are not required.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"poisson-distribution"
+]
+},
+{
+"id": "FS1.2.3",
+"short": "The use of the Poisson distribution as an approximation to the…",
+"text": "The use of the Poisson distribution as an approximation to the binomial distribution.",
+"guidance": "When n is large and p is small the distribution B(n, p) can be approximated by Po(np). Derivations are not required.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"poisson-distribution"
+]
+}
+]
+},
+{
+"code": "FS1.3",
+"title": "Geometric and negative binomial distributions",
+"area": "FS1",
+"strand": "Further Statistics 1",
+"statements": [
+{
+"id": "FS1.3.1",
+"short": "Geometric and negative binomial distributions.",
+"text": "Geometric and negative binomial distributions.",
+"guidance": "Models leading to the distributions p(x) = p(1 − p)^(x − 1), x = 1, 2, … and p(x) = C(x − 1, r − 1) pʳ(1 − p)^(x − r), x = r, r + 1, r + 2, …",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"geometric-and-negative-binomial"
+]
+},
+{
+"id": "FS1.3.2",
+"short": "Mean and variance of a geometric distribution with parameter p.",
+"text": "Mean and variance of a geometric distribution with parameter p.",
+"guidance": "Use of μ = 1/p and σ² = (1 − p)/p².",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"geometric-and-negative-binomial"
+]
+},
+{
+"id": "FS1.3.3",
+"short": "Mean and variance of negative binomial distribution with P(X = x)…",
+"text": "Mean and variance of negative binomial distribution with P(X = x) = C(x − 1, r − 1) pʳ(1 − p)^(x − r).",
+"guidance": "Use of μ = r/p and σ² = r(1 − p)/p².",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"geometric-and-negative-binomial"
+]
+}
+]
+},
+{
+"code": "FS1.4",
+"title": "Hypothesis Testing",
+"area": "FS1",
+"strand": "Further Statistics 1",
+"statements": [
+{
+"id": "FS1.4.1",
+"short": "Extend ideas of hypothesis tests to test for the mean of a Poisson…",
+"text": "Extend ideas of hypothesis tests to test for the mean of a Poisson distribution",
+"guidance": "Hypotheses should be stated in terms of a population parameter μ or λ.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"hypothesis-tests-fs1"
+]
+},
+{
+"id": "FS1.4.2",
+"short": "Extend hypothesis testing to test for the parameter p of a…",
+"text": "Extend hypothesis testing to test for the parameter p of a geometric distribution.",
+"guidance": "Hypotheses should be stated in terms of p",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"hypothesis-tests-fs1"
+]
+}
+]
+},
+{
+"code": "FS1.5",
+"title": "Central Limit Theorem",
+"area": "FS1",
+"strand": "Further Statistics 1",
+"statements": [
+{
+"id": "FS1.5.1",
+"short": "Applications of the Central Limit Theorem to other distributions.",
+"text": "Applications of the Central Limit Theorem to other distributions.",
+"guidance": "For a population with mean μ and variance σ², for large n, X̄ ≈ N(μ, σ²/n). Applications may involve any of the distributions in A level Mathematics or A level Further Statistics 1. No proofs required.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"central-limit-theorem"
+]
+}
+]
+},
+{
+"code": "FS1.6",
+"title": "Chi Squared Tests",
+"area": "FS1",
+"strand": "Further Statistics 1",
+"statements": [
+{
+"id": "FS1.6.1",
+"short": "Goodness of fit tests and Contingency Tables. The null and…",
+"text": "Goodness of fit tests and Contingency Tables. The null and alternative hypotheses. The use of Σ(Oᵢ − Eᵢ)²/Eᵢ (i = 1 to n) as an approximate χ² statistic. Degrees of freedom.",
+"guidance": "Applications to include the discrete uniform, binomial, Poisson and geometric distributions. Lengthy calculations will not be required. Students will be expected to determine the degrees of freedom when one or more parameters are estimated from the data. Cells should be combined when Eᵢ < 5. Students will be expected to obtain p-values from their calculator or use tables to find critical values.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"chi-squared-tests"
+]
+}
+]
+},
+{
+"code": "FS1.7",
+"title": "Probability generating functions",
+"area": "FS1",
+"strand": "Further Statistics 1",
+"statements": [
+{
+"id": "FS1.7.1",
+"short": "Definitions, derivations and applications. Use of the probability…",
+"text": "Definitions, derivations and applications. Use of the probability generating function for the negative binomial, geometric, binomial and Poisson distributions.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"probability-generating-functions"
+]
+},
+{
+"id": "FS1.7.2",
+"short": "Use to find the mean and variance.",
+"text": "Use to find the mean and variance.",
+"guidance": "Proofs of standard results may be required.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"probability-generating-functions"
+]
+},
+{
+"id": "FS1.7.3",
+"short": "Probability generating function of the sum of independent random…",
+"text": "Probability generating function of the sum of independent random variables.",
+"guidance": "G_(X+Y)(t) = G_X(t) × G_Y(t). Derivation is not required.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"probability-generating-functions"
+]
+}
+]
+},
+{
+"code": "FS1.8",
+"title": "Quality of tests",
+"area": "FS1",
+"strand": "Further Statistics 1",
+"statements": [
+{
+"id": "FS1.8.1",
+"short": "Type I and Type II errors. Size and Power of Test. The power function.",
+"text": "Type I and Type II errors. Size and Power of Test. The power function.",
+"guidance": "Calculation of the probability of a Type I or Type II error. Use of Type I and Type II errors and power function to indicate effectiveness of statistical tests. Questions will use any of the distributions in A level Mathematics or A level Further Statistics 1",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"type-i-and-type-ii-errors"
+]
+}
+]
+},
+{
+"code": "FS2.1",
+"title": "Linear Regression",
+"area": "FS2",
+"strand": "Further Statistics 2",
+"statements": [
+{
+"id": "FS2.1.1",
+"short": "Least squares linear regression. The concept of residuals and…",
+"text": "Least squares linear regression. The concept of residuals and minimising the sum of squares of residuals.",
+"guidance": "Students should have an understanding of the process involved in linear regression. They should be able to calculate the regression coefficients for the equation y on x using standard formulae.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"linear-regression"
+]
+},
+{
+"id": "FS2.1.2",
+"short": "Residuals. The residual sum of squares (RSS)",
+"text": "Residuals. The residual sum of squares (RSS)",
+"guidance": "An intuitive use of residuals to check the reasonableness of linear fit and to find possible outliers. Use in refinement of mathematical models. The formula RSS = S_yy − (S_xy)²/S_xx. Derivations are not required.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"linear-regression"
+]
+}
+]
+},
+{
+"code": "FS2.2",
+"title": "Continuous probability distributions",
+"area": "FS2",
+"strand": "Further Statistics 2",
+"statements": [
+{
+"id": "FS2.2.1",
+"short": "The concept of a continuous random variable. The probability…",
+"text": "The concept of a continuous random variable. The probability density function and the cumulative distribution function for a continuous random variable.",
+"guidance": "Students will be expected to link with their knowledge of histograms and frequency polygons. Use of the probability density function f(x), where P(a < X ≤ b) = ∫(a to b) f(x) dx. Use of the cumulative distribution function F(x₀) = P(X ≤ x₀) = ∫(−∞ to x₀) f(x) dx. The formulae used in defining f(x) and the calculus required will be consistent with the level expected in A level Mathematics and A level Further Mathematics.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"continuous-random-variables"
+]
+},
+{
+"id": "FS2.2.2",
+"short": "Relationship between probability density and cumulative…",
+"text": "Relationship between probability density and cumulative distribution functions.",
+"guidance": "f(x) = dF(x)/dx.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"continuous-random-variables"
+]
+},
+{
+"id": "FS2.2.3",
+"short": "Mean and variance of continuous random variables. Extension of…",
+"text": "Mean and variance of continuous random variables. Extension of expected value function to include E(g(X)) Mode, median and percentiles of continuous random variables. Idea of skewness",
+"guidance": "The formulae used to define g(x) will be consistent with the level required in A level Mathematics and A level Further Mathematics Questions may require candidates to use these calculations to assess the suitability of models. Candidates will be expected to describe the skewness as positive, negative or zero and give a suitable justification.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"continuous-random-variables"
+]
+},
+{
+"id": "FS2.2.4",
+"short": "The continuous uniform (rectangular) distribution.",
+"text": "The continuous uniform (rectangular) distribution.",
+"guidance": "Including the derivation of the mean, variance and cumulative distribution function.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"continuous-random-variables"
+]
+}
+]
+},
+{
+"code": "FS2.3",
+"title": "Correlation",
+"area": "FS2",
+"strand": "Further Statistics 2",
+"statements": [
+{
+"id": "FS2.3.1",
+"short": "Use of formulae to calculate the product moment correlation…",
+"text": "Use of formulae to calculate the product moment correlation coefficient. Knowledge of the conditions for the use of the product moment correlation coefficient. A knowledge of the effects of coding will be expected.",
+"guidance": "Students will be expected to be able to use the formula to calculate the value of a coefficient given summary statistics.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"correlation-fs2"
+]
+},
+{
+"id": "FS2.3.2",
+"short": "Spearman’s rank correlation coefficient, its use, interpretation.",
+"text": "Spearman’s rank correlation coefficient, its use, interpretation.",
+"guidance": "Use of r_s = 1 − 6Σd²/(n(n² − 1)). Numerical questions involving ties may be set. An understanding of how to deal with ties will be expected. Students will be expected to calculate the resulting correlation coefficient on their calculator or using the formula.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"correlation-fs2"
+]
+},
+{
+"id": "FS2.3.3",
+"short": "Testing the hypothesis that a correlation is zero using either…",
+"text": "Testing the hypothesis that a correlation is zero using either Spearman’s rank correlation or the product moment correlation coefficient.",
+"guidance": "Hypotheses should be in terms of ρ or ρ_s and test a null hypothesis that ρ or ρ_s = 0. Use of tables for critical values of Spearman’s and product moment correlation coefficients. Students will be expected to know that the critical values for the product moment correlation coefficient require that the data comes from a population having a bivariate normal distribution. Formal verification of this condition is not required.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"correlation-fs2"
+]
+}
+]
+},
+{
+"code": "FS2.4",
+"title": "Combinations of random variables",
+"area": "FS2",
+"strand": "Further Statistics 2",
+"statements": [
+{
+"id": "FS2.4.1",
+"short": "Distribution of linear combinations of independent Normal random…",
+"text": "Distribution of linear combinations of independent Normal random variables.",
+"guidance": "If X ~ N(μ_x, σ_x²) and Y ~ N(μ_y, σ_y²) independently, then aX ± bY ~ N(aμ_x ± bμ_y, a²σ_x² + b²σ_y²). No proofs required.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"combinations-of-random-variables"
+]
+}
+]
+},
+{
+"code": "FS2.5",
+"title": "Estimation, confidence intervals and tests using a normal distribution",
+"area": "FS2",
+"strand": "Further Statistics 2",
+"statements": [
+{
+"id": "FS2.5.1",
+"short": "Concepts of standard error, estimator, bias. Quality of estimators",
+"text": "Concepts of standard error, estimator, bias. Quality of estimators",
+"guidance": "The sample mean, x̄, and the sample variance, s² = (1/(n − 1)) Σ(xᵢ − x̄)², as unbiased estimates of the corresponding population parameters. Candidates will be expected to compare estimators and look for features such as unbiasedness and small variance.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"estimation-and-confidence-intervals"
+]
+},
+{
+"id": "FS2.5.2",
+"short": "Concept of a confidence interval and its interpretation.",
+"text": "Concept of a confidence interval and its interpretation.",
+"guidance": "Link with hypothesis tests.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"estimation-and-confidence-intervals"
+]
+},
+{
+"id": "FS2.5.3",
+"short": "Confidence limits for a Normal mean, with variance known.",
+"text": "Confidence limits for a Normal mean, with variance known.",
+"guidance": "Candidates will be expected to know how to apply the Normal distribution and use the standard error and obtain confidence intervals for the mean, rather than be concerned with any theoretical derivations.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"estimation-and-confidence-intervals"
+]
+},
+{
+"id": "FS2.5.4",
+"short": "Hypothesis test for the difference between the means of two Normal…",
+"text": "Hypothesis test for the difference between the means of two Normal distributions with variances known.",
+"guidance": "Use of [(X̄ − Ȳ) − (μ_x − μ_y)] / √(σ_x²/n_x + σ_y²/n_y) ~ N(0, 1).",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"estimation-and-confidence-intervals"
+]
+},
+{
+"id": "FS2.5.5",
+"short": "Use of large sample results to extend to the case in which the…",
+"text": "Use of large sample results to extend to the case in which the population variances are unknown.",
+"guidance": "Use of Central Limit Theorem and use of [(X̄ − Ȳ) − (μ_x − μ_y)] / √(S_x²/n_x + S_y²/n_y) ≈ N(0, 1).",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"estimation-and-confidence-intervals"
+]
+}
+]
+},
+{
+"code": "FS2.6",
+"title": "Other Hypothesis Tests and confidence intervals",
+"area": "FS2",
+"strand": "Further Statistics 2",
+"statements": [
+{
+"id": "FS2.6.1",
+"short": "Hypothesis test and confidence interval for the variance of a…",
+"text": "Hypothesis test and confidence interval for the variance of a Normal distribution.",
+"guidance": "Use of (n − 1)S²/σ² ~ χ²ₙ₋₁. Candidates may use χ²-tables or their calculators to find critical values or p-values.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"chi-squared-and-f-tests"
+]
+},
+{
+"id": "FS2.6.2",
+"short": "Hypothesis test that two independent random samples are from…",
+"text": "Hypothesis test that two independent random samples are from Normal populations with equal variances.",
+"guidance": "Use of S₁²/S₂² ~ F(n₁ − 1, n₂ − 1) under H₀. Candidates may use tables of the F-distribution or their calculators to find critical values or p-values.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"chi-squared-and-f-tests"
+]
+}
+]
+},
+{
+"code": "FS2.7",
+"title": "Confidence intervals and tests using the t – distribution",
+"area": "FS2",
+"strand": "Further Statistics 2",
+"statements": [
+{
+"id": "FS2.7.1",
+"short": "Hypothesis test and confidence interval for the mean of a Normal…",
+"text": "Hypothesis test and confidence interval for the mean of a Normal distribution with unknown variance.",
+"guidance": "Use of (X̄ − μ)/(S/√n) ~ tₙ₋₁. Candidates may use t-tables or their calculators to calculate critical or p-values.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"t-tests"
+]
+},
+{
+"id": "FS2.7.2",
+"short": "Paired t-test.",
+"text": "Paired t-test.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"t-tests"
+]
+},
+{
+"id": "FS2.7.3",
+"short": "Hypothesis test and confidence interval for the difference between…",
+"text": "Hypothesis test and confidence interval for the difference between two means from independent Normal distributions when the variances are equal but unknown. Use of the pooled estimate of variance.",
+"guidance": "Use of t-distribution. [X̄ − Ȳ − (μ_x − μ_y)] / (S√(1/n_x + 1/n_y)) ~ t(n_x + n_y − 2) under H₀, where S² = ((n₁ − 1)s₁² + (n₂ − 1)s₂²)/(n₁ + n₂ − 2).",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"t-tests"
+]
+}
+]
+},
+{
+"code": "FM1.1",
+"title": "Momentum and impulse",
+"area": "FM1",
+"strand": "Further Mechanics 1",
+"statements": [
+{
+"id": "FM1.1.1",
+"short": "Momentum and impulse. The impulse- momentum principle. The…",
+"text": "Momentum and impulse. The impulse- momentum principle. The principle of conservation of momentum applied to two spheres colliding directly.",
+"guidance": "The spheres may be modelled as particles.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"momentum-and-impulse"
+]
+},
+{
+"id": "FM1.1.2",
+"short": "Momentum as a vector. The impulse-momentum principle in vector form.",
+"text": "Momentum as a vector. The impulse-momentum principle in vector form.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"momentum-and-impulse"
+]
+}
+]
+},
+{
+"code": "FM1.2",
+"title": "Work, energy and power",
+"area": "FM1",
+"strand": "Further Mechanics 1",
+"statements": [
+{
+"id": "FM1.2.1",
+"short": "Kinetic and potential energy, work and power. The work- energy…",
+"text": "Kinetic and potential energy, work and power. The work- energy principle. The principle of conservation of mechanical energy.",
+"guidance": "Problems involving motion under a variable resistance and/or up and down an inclined plane may be set.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"work-energy-and-power"
+]
+}
+]
+},
+{
+"code": "FM1.3",
+"title": "Elastic strings and springs and elastic energy",
+"area": "FM1",
+"strand": "Further Mechanics 1",
+"statements": [
+{
+"id": "FM1.3.1",
+"short": "Elastic strings and springs. Hooke’s law.",
+"text": "Elastic strings and springs. Hooke’s law.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"elastic-strings-and-springs"
+]
+},
+{
+"id": "FM1.3.2",
+"short": "Energy stored in an elastic string or spring.",
+"text": "Energy stored in an elastic string or spring.",
+"guidance": "Problems using the work-energy principle involving kinetic energy, potential energy and elastic energy may be set.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"elastic-strings-and-springs"
+]
+}
+]
+},
+{
+"code": "FM1.4",
+"title": "Elastic collisions in one dimension",
+"area": "FM1",
+"strand": "Further Mechanics 1",
+"statements": [
+{
+"id": "FM1.4.1",
+"short": "Direct impact of elastic spheres. Newton’s law of restitution.…",
+"text": "Direct impact of elastic spheres. Newton’s law of restitution. Loss of kinetic energy due to impact.",
+"guidance": "Students will be expected to know and use the inequalities 0 ≤ e ≤ 1 (where e is the coefficient of restitution). The spheres may be modelled as particles.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"collisions-in-one-dimension"
+]
+},
+{
+"id": "FM1.4.2",
+"short": "Successive direct impacts of spheres and/or a sphere with a smooth…",
+"text": "Successive direct impacts of spheres and/or a sphere with a smooth plane surface.",
+"guidance": "The spheres may be modelled as particles.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"collisions-in-one-dimension"
+]
+}
+]
+},
+{
+"code": "FM1.5",
+"title": "Elastic collisions in two dimensions",
+"area": "FM1",
+"strand": "Further Mechanics 1",
+"statements": [
+{
+"id": "FM1.5.1",
+"short": "Oblique impact of smooth elastic spheres and a smooth sphere with…",
+"text": "Oblique impact of smooth elastic spheres and a smooth sphere with a fixed surface. Loss of kinetic energy due to impact.",
+"guidance": "Problems will only involve spheres with the same radius. Problems may be set in vector form. The spheres may be modelled as particles.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"oblique-collisions"
+]
+},
+{
+"id": "FM1.5.2",
+"short": "Successive oblique impacts of a sphere with smooth plane surfaces.",
+"text": "Successive oblique impacts of a sphere with smooth plane surfaces.",
+"guidance": "The sphere may be modelled as particle.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"oblique-collisions"
+]
+}
+]
+},
+{
+"code": "FM2.1",
+"title": "Motion in a circle",
+"area": "FM2",
+"strand": "Further Mechanics 2",
+"statements": [
+{
+"id": "FM2.1.1",
+"short": "Angular speed. v = rω. Uniform motion of a particle moving in a…",
+"text": "Angular speed. v = rω. Uniform motion of a particle moving in a horizontal circle. Radial acceleration in circular motion. The forms rω² and v²/r are required.",
+"guidance": "Problems involving the ‘conical pendulum’, an elastic string, motion on a banked surface, as well as other contexts, may be set.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"circular-motion"
+]
+},
+{
+"id": "FM2.1.2",
+"short": "Motion of a particle in a vertical circle. Radial and tangential…",
+"text": "Motion of a particle in a vertical circle. Radial and tangential acceleration in circular motion. Kinetic and potential energy and the conservation of energy principle applied to motion in a vertical circle.",
+"guidance": "Questions may be set which involve complete or incomplete circles.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"circular-motion"
+]
+}
+]
+},
+{
+"code": "FM2.2",
+"title": "Centres of mass of plane figures",
+"area": "FM2",
+"strand": "Further Mechanics 2",
+"statements": [
+{
+"id": "FM2.2.1",
+"short": "Moment of a force. Centre of mass of a discrete mass distribution…",
+"text": "Moment of a force. Centre of mass of a discrete mass distribution in one and two dimensions.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"centres-of-mass-plane-figures"
+]
+},
+{
+"id": "FM2.2.2",
+"short": "Centre of mass of uniform plane figures, and of composite plane…",
+"text": "Centre of mass of uniform plane figures, and of composite plane figures. Centre of mass of frameworks. Equilibrium of a plane lamina or framework under the action of coplanar forces.",
+"guidance": "The use of an axis of symmetry will be acceptable where appropriate. Use of integration is not required. Questions may involve non-uniform composite plane figures/frameworks. Figures may include the shapes referred to in the formulae book. Unless otherwise stated in the question, results given in the formulae book may be quoted without proof.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"centres-of-mass-plane-figures"
+]
+}
+]
+},
+{
+"code": "FM2.3",
+"title": "Further centres of mass",
+"area": "FM2",
+"strand": "Further Mechanics 2",
+"statements": [
+{
+"id": "FM2.3.1",
+"short": "Centre of mass of uniform and non-uniform rigid bodies and…",
+"text": "Centre of mass of uniform and non-uniform rigid bodies and composite bodies.",
+"guidance": "Problems which involve the use of integration and/or symmetry to determine the centre of mass of a uniform or non-uniform body may be set. The level of calculus will be consistent with that required in A level Mathematics and Further Mathematics. Unless otherwise stated in the question, results given in the formulae book may be quoted without proof.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"further-centres-of-mass"
+]
+},
+{
+"id": "FM2.3.2",
+"short": "Equilibrium of rigid bodies under the action of coplanar forces.",
+"text": "Equilibrium of rigid bodies under the action of coplanar forces.",
+"guidance": "To include (i) suspension of a body from a fixed point, (ii) a rigid body placed on a horizontal or inclined plane.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"further-centres-of-mass"
+]
+},
+{
+"id": "FM2.3.3",
+"short": "Toppling and sliding of a rigid body on a rough plane.",
+"text": "Toppling and sliding of a rigid body on a rough plane.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"further-centres-of-mass"
+]
+}
+]
+},
+{
+"code": "FM2.4",
+"title": "Further dynamics",
+"area": "FM2",
+"strand": "Further Mechanics 2",
+"statements": [
+{
+"id": "FM2.4.1",
+"short": "Newton’s laws of motion, for a particle moving in one dimension,…",
+"text": "Newton’s laws of motion, for a particle moving in one dimension, when the applied force is variable.",
+"guidance": "The solution of the resulting equations will be consistent with the level of calculus required in A level Mathematics and Further Mathematics. Problems may involve the law of gravitation, i.e. the inverse square law.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"further-dynamics-and-shm"
+]
+},
+{
+"id": "FM2.4.2",
+"short": "Simple harmonic motion. Oscillations of a particle attached to the…",
+"text": "Simple harmonic motion. Oscillations of a particle attached to the end of elastic string(s) or spring(s). Kinetic, potential and elastic energy in the context of SHM.",
+"guidance": "Proof that a particle moves with simple harmonic motion in a given situation may be required (i.e. showing that ẍ = −ω²x). Students will be expected to be familiar with standard formulae, which may be quoted without proof, e.g. x = a sin ωt, x = a cos ωt, v² = ω²(a² − x²), T = 2π/ω.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"further-dynamics-and-shm"
+]
+}
+]
+},
+{
+"code": "FM2.5",
+"title": "Further kinematics",
+"area": "FM2",
+"strand": "Further Mechanics 2",
+"statements": [
+{
+"id": "FM2.5.1",
+"short": "Kinematics of a particle moving in a straight line when the…",
+"text": "Kinematics of a particle moving in a straight line when the acceleration is a function of the displacement (x), or time (t) or velocity (v).",
+"guidance": "The setting up and solution of equations where dv/dt = f(t) or dv/dt = f(v), v dv/dx = f(v) or v dv/dx = f(x), dx/dt = f(x) or dx/dt = f(t) will be consistent with the level of calculus required in A level Mathematics and Further Mathematics.",
+"level": "Partly A level only",
+"aLevelPart": "",
+"topics": [
+"further-kinematics"
+]
+}
+]
+},
+{
+"code": "D1.1",
+"title": "Algorithms and graph theory",
+"area": "D1",
+"strand": "Decision 1",
+"statements": [
+{
+"id": "D1.1.1",
+"short": "The general ideas of algorithms and the implementation of an…",
+"text": "The general ideas of algorithms and the implementation of an algorithm given by a flow chart or text.",
+"guidance": "The meaning of the order of an algorithm is expected. Students will be expected to determine the order of a given algorithm and the order of standard network problems.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"algorithms-and-graph-theory"
+]
+},
+{
+"id": "D1.1.2",
+"short": "Bin packing, bubble sort and quick sort.",
+"text": "Bin packing, bubble sort and quick sort.",
+"guidance": "When using the quick sort algorithm, the pivot should be chosen as the middle item of the list.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"algorithms-and-graph-theory"
+]
+},
+{
+"id": "D1.1.3",
+"short": "Use of the order of the nodes to determine whether a graph is…",
+"text": "Use of the order of the nodes to determine whether a graph is Eulerian, semi- Eulerian or neither.",
+"guidance": "Students will be expected to be familiar with the following types of graphs: complete (including K notation), planar and isomorphic.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"algorithms-and-graph-theory"
+]
+},
+{
+"id": "D1.1.4",
+"short": "The planarity algorithm for planar graphs.",
+"text": "The planarity algorithm for planar graphs.",
+"guidance": "Students will be expected to be familiar with the term ‘Hamiltonian cycle’.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"algorithms-and-graph-theory"
+]
+}
+]
+},
+{
+"code": "D1.2",
+"title": "Algorithms on graphs",
+"area": "D1",
+"strand": "Decision 1",
+"statements": [
+{
+"id": "D1.2.1",
+"short": "The minimum spanning tree (minimum connector) problem. Prim’s and…",
+"text": "The minimum spanning tree (minimum connector) problem. Prim’s and Kruskal’s algorithm.",
+"guidance": "Matrix representation for Prim’s algorithm is expected. Drawing a network from a given matrix and writing down the matrix associated with a network may be required.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"minimum-spanning-trees-and-shortest-paths"
+]
+},
+{
+"id": "D1.2.2",
+"short": "Dijkstra’s and Floyd’s algorithm for finding the shortest path.",
+"text": "Dijkstra’s and Floyd’s algorithm for finding the shortest path.",
+"guidance": "When applying Floyd’s algorithm, unless directed otherwise, students will be expected to complete the first iteration on the first row of the corresponding distance and route problems, the second iteration on the second row and so on until the algorithm is complete.",
+"level": "Partly A level only",
+"aLevelPart": "",
+"topics": [
+"minimum-spanning-trees-and-shortest-paths"
+]
+}
+]
+},
+{
+"code": "D1.3",
+"title": "Algorithms on graphs II",
+"area": "D1",
+"strand": "Decision 1",
+"statements": [
+{
+"id": "D1.3.1",
+"short": "Algorithm for finding the shortest route around a network,…",
+"text": "Algorithm for finding the shortest route around a network, travelling along every edge at least once and ending at the start vertex (The Route Inspection Algorithm).",
+"guidance": "Also known as the ‘Chinese postman’ problem. Students will be expected to use inspection to consider all possible pairings of odd nodes. The network will contain at most four odd nodes. If the network has more than four odd nodes then additional information will be provided that will restrict the number of pairings that will need to be considered.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"route-inspection-and-travelling-salesman"
+]
+},
+{
+"id": "D1.3.2",
+"short": "The practical and classical Travelling Salesman problems. The…",
+"text": "The practical and classical Travelling Salesman problems. The classical problem for complete graphs satisfying the triangle inequality. Determination of upper and lower bounds using minimum spanning tree methods. The nearest neighbour algorithm.",
+"guidance": "The use of short cuts to improve upper bound is included. The conversion of a network into a complete network of shortest ‘distances’ is included.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"route-inspection-and-travelling-salesman"
+]
+}
+]
+},
+{
+"code": "D1.4",
+"title": "Critical path analysis",
+"area": "D1",
+"strand": "Decision 1",
+"statements": [
+{
+"id": "D1.4.1",
+"short": "Modelling of a project by an activity network, from a precedence…",
+"text": "Modelling of a project by an activity network, from a precedence table.",
+"guidance": "Activity on arc will be used. The use of dummies is included.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"critical-path-analysis"
+]
+},
+{
+"id": "D1.4.2",
+"short": "Completion of the precedence table for a given activity network.",
+"text": "Completion of the precedence table for a given activity network.",
+"guidance": "In a precedence network, precedence tables will only show immediate predecessors.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"critical-path-analysis"
+]
+},
+{
+"id": "D1.4.3",
+"short": "Algorithm for finding the critical path. Earliest and latest event…",
+"text": "Algorithm for finding the critical path. Earliest and latest event times. Earliest and latest start and finish times for activities. Identification of critical activities and critical path(s).",
+"guidance": "Calculating the lower bound for the number of workers required to complete the project in the shortest possible time is required.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"critical-path-analysis"
+]
+},
+{
+"id": "D1.4.4",
+"short": "Calculation of the total float of an activity. Construction of…",
+"text": "Calculation of the total float of an activity. Construction of Gantt (cascade) charts.",
+"guidance": "Each activity will require only one worker.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"critical-path-analysis"
+]
+},
+{
+"id": "D1.4.5",
+"short": "Construct resource histograms (including resource levelling) based…",
+"text": "Construct resource histograms (including resource levelling) based on the number of workers required to complete each activity.",
+"guidance": "The number of workers required to complete each activity of a project will be given and the number or workers required may not necessarily be one.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"critical-path-analysis"
+]
+},
+{
+"id": "D1.4.6",
+"short": "Scheduling the activities using the least number of workers…",
+"text": "Scheduling the activities using the least number of workers required to complete the project.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"critical-path-analysis"
+]
+}
+]
+},
+{
+"code": "D1.5",
+"title": "Linear programming",
+"area": "D1",
+"strand": "Decision 1",
+"statements": [
+{
+"id": "D1.5.1",
+"short": "Formulation of problems as linear programs including the meaning…",
+"text": "Formulation of problems as linear programs including the meaning and use of slack, surplus and artificial variables.",
+"guidance": "For example, 3x + 2y ≤ 20 ⇒ 3x + 2y + s₁ = 20; 2x + 5y ≤ 35 ⇒ 2x + 5y + s₂ = 35; x + y ≥ 5 ⇒ x + y − s₃ + t₁ = 5; where s₁, s₂ are slack variables, s₃ is a surplus variable and t₁ is an artificial variable.",
+"level": "Partly A level only",
+"aLevelPart": "",
+"topics": [
+"linear-programming"
+]
+},
+{
+"id": "D1.5.2",
+"short": "Graphical solution of two variable problems using objective line…",
+"text": "Graphical solution of two variable problems using objective line and vertex methods including cases where integer solutions are required.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"linear-programming"
+]
+},
+{
+"id": "D1.5.3",
+"short": "The Simplex algorithm and tableau for maximising and minimising…",
+"text": "The Simplex algorithm and tableau for maximising and minimising problems with ≤ constraints.",
+"guidance": "Problems will be restricted to those with a maximum of four variables (excluding slack variables) and four constraints, in addition to non-negativity conditions.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"linear-programming"
+]
+},
+{
+"id": "D1.5.4",
+"short": "The two-stage Simplex and big-M methods for maximising and…",
+"text": "The two-stage Simplex and big-M methods for maximising and minimising problems which may include both ≤ and ≥ constraints.",
+"guidance": "Problems will be restricted to those with a maximum of four variables (excluding slack, surplus and artificial variables) and four constraints, in addition to any non-negativity conditions.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"linear-programming"
+]
+}
+]
+},
+{
+"code": "D2.1",
+"title": "Transportation problems",
+"area": "D2",
+"strand": "Decision 2",
+"statements": [
+{
+"id": "D2.1.1",
+"short": "The north-west corner method for finding an initial basic feasible…",
+"text": "The north-west corner method for finding an initial basic feasible solution.",
+"guidance": "Problems will be restricted to a maximum of four sources and four destinations.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"transportation-problems"
+]
+},
+{
+"id": "D2.1.2",
+"short": "Use of the stepping- stone method for obtaining an improved…",
+"text": "Use of the stepping- stone method for obtaining an improved solution. Improvement indices.",
+"guidance": "The ideas of dummy locations and degeneracy are required. Students should identify a specific entering cell and a specific exiting cell.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"transportation-problems"
+]
+},
+{
+"id": "D2.1.3",
+"short": "Formulation of the transportation problem as a linear programming…",
+"text": "Formulation of the transportation problem as a linear programming problem.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"transportation-problems"
+]
+}
+]
+},
+{
+"code": "D2.2",
+"title": "Allocation (assignment) problems",
+"area": "D2",
+"strand": "Decision 2",
+"statements": [
+{
+"id": "D2.2.1",
+"short": "Cost matrix reduction. Students should reduce rows first. Use of…",
+"text": "Cost matrix reduction. Students should reduce rows first. Use of the Hungarian algorithm to find a least cost allocation. Modification of the Hungarian algorithm to deal with a maximum profit allocation.",
+"guidance": "Ideas of a dummy location is required. The adaption of the algorithm to manage incomplete data is required. Students should subtract all the values (in the original matrix) from the largest value (in the original matrix).",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"allocation-problems"
+]
+},
+{
+"id": "D2.2.2",
+"short": "Formulation of the Hungarian algorithm as a linear programming…",
+"text": "Formulation of the Hungarian algorithm as a linear programming problem.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"allocation-problems"
+]
+}
+]
+},
+{
+"code": "D2.3",
+"title": "Flows in networks",
+"area": "D2",
+"strand": "Decision 2",
+"statements": [
+{
+"id": "D2.3.1",
+"short": "Cuts and their capacity.",
+"text": "Cuts and their capacity.",
+"guidance": "Only networks with directed arcs will be considered.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"flows-in-networks"
+]
+},
+{
+"id": "D2.3.2",
+"short": "Use of the labelling procedure to augment a flow to determine the…",
+"text": "Use of the labelling procedure to augment a flow to determine the maximum flow in a network.",
+"guidance": "The arrow in the same direction as the arc will be used to identify the amount by which the flow along that arc can be increased. The arrow in the opposite direction will be used to identify the amount by which the flow in the arc could be reduced.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"flows-in-networks"
+]
+},
+{
+"id": "D2.3.3",
+"short": "Use of the max–flow min–cut theorem to prove that a flow is a…",
+"text": "Use of the max–flow min–cut theorem to prove that a flow is a maximum flow.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"flows-in-networks"
+]
+},
+{
+"id": "D2.3.4",
+"short": "Multiple sources and sinks. Vertices with restricted capacity.",
+"text": "Multiple sources and sinks. Vertices with restricted capacity.",
+"guidance": "Problems may include vertices with restricted capacity.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"flows-in-networks"
+]
+},
+{
+"id": "D2.3.5",
+"short": "Determine the optimal flow rate in a network, subject to given…",
+"text": "Determine the optimal flow rate in a network, subject to given constraints.",
+"guidance": "Problems may include both upper and lower capacities.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"flows-in-networks"
+]
+}
+]
+},
+{
+"code": "D2.4",
+"title": "Dynamic programming",
+"area": "D2",
+"strand": "Decision 2",
+"statements": [
+{
+"id": "D2.4.1",
+"short": "Principles of dynamic programming. Bellman’s principle of…",
+"text": "Principles of dynamic programming. Bellman’s principle of optimality. Stage variables and State variables. Use of tabulation to solve maximum, minimum, minimax or maximin problems.",
+"guidance": "Students should be aware that any part of the shortest/longest path from source to sink is itself a shortest/longest path, that is, any part of an optimal path is itself optimal. Both network and table formats are required.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"dynamic-programming"
+]
+}
+]
+},
+{
+"code": "D2.5",
+"title": "Game theory",
+"area": "D2",
+"strand": "Decision 2",
+"statements": [
+{
+"id": "D2.5.1",
+"short": "Two person zero-sum games and the pay-off matrix.",
+"text": "Two person zero-sum games and the pay-off matrix.",
+"guidance": "A pay-off matrix will always be written from the row player’s point of view unless directed otherwise.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"game-theory"
+]
+},
+{
+"id": "D2.5.2",
+"short": "Identification of play safe strategies and stable solutions…",
+"text": "Identification of play safe strategies and stable solutions (saddle points).",
+"guidance": "Students should be aware that in a zero- sum game there will be a stable solution if and only if the row maximin = the column minimax The proof of the stable solution theorem is not required.",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"game-theory"
+]
+},
+{
+"id": "D2.5.3",
+"short": "Reduction of pay-off matrices using dominance arguments.",
+"text": "Reduction of pay-off matrices using dominance arguments.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"game-theory"
+]
+},
+{
+"id": "D2.5.4",
+"short": "Optimal mixed strategies for a game with no stable solution by use…",
+"text": "Optimal mixed strategies for a game with no stable solution by use of graphical methods for 2 × n or n × 2 games where n = 1, 2, 3 or 4.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"game-theory"
+]
+},
+{
+"id": "D2.5.5",
+"short": "Optimal mixed strategies for a game with no stable solution by…",
+"text": "Optimal mixed strategies for a game with no stable solution by converting games to linear programming problems that can be solved by the Simplex algorithm.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"game-theory"
+]
+}
+]
+},
+{
+"code": "D2.6",
+"title": "Recurrence relations",
+"area": "D2",
+"strand": "Decision 2",
+"statements": [
+{
+"id": "D2.6.1",
+"short": "Use of recurrence relations to model appropriate problems.",
+"text": "Use of recurrence relations to model appropriate problems.",
+"guidance": "",
+"level": "AS & A level",
+"aLevelPart": "",
+"topics": [
+"recurrence-relations-d2"
+]
+},
+{
+"id": "D2.6.2",
+"short": "Solution of first and second order linear homogeneous and…",
+"text": "Solution of first and second order linear homogeneous and non-homogeneous recurrence relations.",
+"guidance": "Students should be able to solve relations such as uₙ₊₁ − 5uₙ = 8, u₁ = 1; 2uₙ₊₂ + 7uₙ₊₁ − 15uₙ = 6, u₁ = 10, u₂ = −17. The terms particular solution, complementary function and auxiliary equation should be known. Use of recurrence relations to model applications, e.g. population growth.",
+"level": "Partly A level only",
+"aLevelPart": "",
+"topics": [
+"recurrence-relations-d2"
+]
+}
+]
+},
+{
+"code": "D2.7",
+"title": "Decision analysis",
+"area": "D2",
+"strand": "Decision 2",
+"statements": [
+{
+"id": "D2.7.1",
+"short": "Use, construct and interpret decision trees.",
+"text": "Use, construct and interpret decision trees.",
+"guidance": "Students should be familiar with the terms decision nodes, chance nodes and pay-offs.",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"decision-analysis"
+]
+},
+{
+"id": "D2.7.2",
+"short": "Use of expected monetary values (EMVs) and utility to compare…",
+"text": "Use of expected monetary values (EMVs) and utility to compare alternative courses of action.",
+"guidance": "",
+"level": "A level only",
+"aLevelPart": "",
+"topics": [
+"decision-analysis"
+]
+}
+]
+}
+]

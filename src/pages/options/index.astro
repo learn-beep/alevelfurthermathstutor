@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import b from '../../data/boundaries.json';
+import { allTopics, STRANDS, strandBadge, STRAND_PAPERS } from '../../lib/data';
+const NAMES = { '3A': 'Further Pure 1', '3B': 'Further Statistics 1', '3C': 'Further Mechanics 1', '3D': 'Decision 1', '4A': 'Further Pure 2', '4B': 'Further Statistics 2', '4C': 'Further Mechanics 2', '4D': 'Decision 2', '21': 'Further Pure 1', '22': 'Further Pure 2', '23': 'Further Statistics 1', '24': 'Further Statistics 2', '25': 'Further Mechanics 1', '26': 'Further Mechanics 2', '27': 'Decision 1', '28': 'Decision 2' };
+const latest = b.series[0];
+const alRoutes = latest.alevel.map((r) => r.route.split(' ').slice(2));
+const asRoutes = latest.as.map((r) => r.route.split(' ').slice(1));
+const options = STRANDS.slice(1);
+---
+<Base title="Edexcel Further Maths options explained: which papers can you take? (9FM0, 8FM0)" description="How the Edexcel Further Maths options work: the ten allowed combinations for A level and AS, what Further Pure, Further Statistics, Further Mechanics and Decision each cover, and every past-paper question for each option." context="options" leadLine="Not sure which options suit you? Our Further Maths tutor can help you decide.">
+  <h1>Edexcel Further Maths options</h1>
+  <p>Every Edexcel Further Maths student sits Core Pure. On top of that you take two options. Schools usually choose the options for the whole class, so check yours before you revise. The options are:</p>
+  <ul>
+    <li><strong>Further Pure 1 and 2</strong>: more pure maths, such as t-formulae, Taylor series, conics, groups, number theory and recurrence relations.</li>
+    <li><strong>Further Statistics 1 and 2</strong>: Poisson, geometric and negative binomial distributions, chi-squared tests, generating functions, regression, confidence intervals and t-tests.</li>
+    <li><strong>Further Mechanics 1 and 2</strong>: momentum, work and energy, collisions, circular motion, centres of mass and simple harmonic motion.</li>
+    <li><strong>Decision 1 and 2</strong>: algorithms, graphs and networks, critical path analysis, linear programming, transportation, allocation, flows and game theory.</li>
+  </ul>
+
+  <h2>A level (9FM0): the ten allowed combinations</h2>
+  <p>Papers 1 and 2 (Core Pure) plus two of the following pairs. Each paper is 75 marks and 1 hour 30 minutes. A "2" option (Paper 4) can only be taken with its own "1" option.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>First option</th><th>Second option</th></tr></thead>
+    <tbody>{alRoutes.map(([a, c]) => <tr><td>{a} {NAMES[a]}</td><td>{c} {NAMES[c]}</td></tr>)}</tbody>
+  </table></div>
+
+  <h2>AS (8FM0): the ten allowed combinations</h2>
+  <p>Paper 1 (Core Pure, 80 marks) plus Paper 2: two options of 40 marks each, sat together in 1 hour 40 minutes.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>First option</th><th>Second option</th></tr></thead>
+    <tbody>{asRoutes.map(([a, c]) => <tr><td>{NAMES[a]}</td><td>{NAMES[c]}</td></tr>)}</tbody>
+  </table></div>
+  <p class="muted">Combinations taken from Pearson's {latest.series} grade boundaries, which list each one. <a href="/grade-boundaries/">Boundaries for each combination</a>.</p>
+
+  <h2>What each option covers</h2>
+  {options.map((s) => <>
+    <h3 id={s.toLowerCase().replace(/ /g, '-')}>{s} <span class={`badge badge-${strandBadge(s)}`}>{STRAND_PAPERS[s].split(';')[0].replace('A level ', '')}</span></h3>
+    <ul class="topic-list">{allTopics.filter((t) => t.strand === s).map((t) => <li><a href={`/questions/${t.slug}/`}><span>{t.name}</span><span class="strand">{t.parts} parts</span></a></li>)}</ul>
+  </>)}
+  <p>Core Pure topics are on the <a href="/questions/#core-pure">questions page</a>.</p>
+</Base>

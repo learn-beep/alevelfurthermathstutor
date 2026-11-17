@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import weighting from '../../data/weighting.json';
+import { allPapers, byId, topicByslug } from '../../lib/data';
+const areas = ['1','2','3','4','5','6','7','8','9'];
+const palette = ['#e8640c','#1f7a4d','#2b5fb3','#a86b00','#7b3fb3','#b3261e','#0e8a8a','#6b6b6b','#c2185b','#4e7d1e','#5d4037','#00695c','#8e24aa','#ef6c00','#3949ab','#00838f','#c62828','#558b2f','#6d4c41'];
+const colour = Object.fromEntries(areas.map((a, i) => [a, palette[i % palette.length]]));
+const secNo = (id) => { const m = (id || '').match(/^(?:CP(\d+)|[A-Z]+\d\.(\d+))/); return m ? (m[1] || m[2]) : ''; };
+const areaOf = (q) => secNo(q.statements[0]);
+const papers = allPapers.sort((a, b) => b.year - a.year || a.spec.localeCompare(b.spec) || a.id.localeCompare(b.id));
+---
+<Base title="Every Edexcel Further Maths paper as a timeline, 2018–2025" description="Each Edexcel Further Maths paper as a strip: every question coloured by spec section and sized by marks, so you can see which topics carry the marks and how often each comes up." context="timeline">
+  <h1>Every paper, question by question</h1>
+  <p>Each strip is one paper; each block is a question part, sized by marks and coloured by the section of that paper's area of the specification it assesses (for example, on a Core Pure paper section 2 is complex numbers; on Decision 1 section 4 is critical path analysis). Hover or tap a block to see its topic.</p>
+  <div class="tl-key">{areas.map((a) => <span><i style={`background:${colour[a]}`}></i>Section {a}</span>)}</div>
+  <div class="timeline">
+    {papers.map((p) => { const qs = p.questions.map((id) => byId.get(id)).filter(Boolean); const total = qs.reduce((n, q) => n + q.marks, 0) || 1; return <div class="tl-row"><span class="lab"><a href={`/past-papers/${p.slug}/`}>{p.series.replace('June ', 'Jun ').replace('October ', 'Oct ')} {p.qual === 'AS' ? 'AS ' : ''}{p.paper}</a></span><div class="tl-strip">{qs.map((q) => <a href={`/past-papers/${p.slug}/#${q.id}`} style={`width:${(100 * q.marks / total).toFixed(2)}%;background:${colour[areaOf(q)] || '#bbb'}`} title={`Q${q.question}: ${q.topics.map((t) => topicByslug.get(t)?.name).join(', ')}, ${q.marks} marks`}></a>)}</div></div>; })}
+  </div>
+</Base>

@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allPapers, PEARSON_MATERIALS } from '../../lib/data';
+const al = allPapers.filter((p) => p.spec === '9FM0');
+const as = allPapers.filter((p) => p.spec === '8FM0');
+const alSeries = [...new Set(al.map((p) => p.series))];
+const asSeries = [...new Set(as.map((p) => p.series))];
+const alCols = [['01', 'Core Pure 1'], ['02', 'Core Pure 2'], ['3A', 'FP1'], ['3B', 'FS1'], ['3C', 'FM1'], ['3D', 'D1'], ['4A', 'FP2'], ['4B', 'FS2'], ['4C', 'FM2'], ['4D', 'D2']];
+const asCols = [['01', 'Core Pure'], ['21', 'FP1'], ['22', 'FP2'], ['23', 'FS1'], ['24', 'FS2'], ['25', 'FM1'], ['26', 'FM2'], ['27', 'D1'], ['28', 'D2']];
+const cell = (list, series, code) => list.find((p) => p.series === series && p.code === code);
+const shortS = (s) => s.replace('June ', 'Jun ').replace('October ', 'Oct ').replace('November ', 'Nov ');
+---
+<Base title="Edexcel Further Maths past papers (9FM0 and AS 8FM0) with every question by topic" description="Every Edexcel A-level and AS Further Maths past paper since 2018: Core Pure 1 and 2 and all eight options, each with a question-by-question table of topics and marks, mark schemes and examiner comments." context="past-papers">
+  <h1>Edexcel Further Maths past papers</h1>
+  <p>Every 9FM0 and 8FM0 paper Pearson has released, from the first AS series in June 2018 to June 2025. Each paper page lists every question with its topic and marks, shows the questions with their mark schemes and examiner comments, and links to Pearson for the PDFs.</p>
+  <p><a class="btn" href={PEARSON_MATERIALS} rel="noopener">Pearson's past-paper PDFs</a> · <a href="/options/">How the options work</a></p>
+
+  <h2>A level (9FM0)</h2>
+  <p class="muted small-text">Papers 1 and 2 are Core Pure (75 marks each). The two options (75 marks each) are any two of 3A–3D, or one of 3A–3D with its matching Paper 4, for example 3B with 4B. FP = Further Pure, FS = Further Statistics, FM = Further Mechanics, D = Decision.</p>
+  <div class="table-wrap"><table class="papers-grid">
+    <thead><tr><th>Series</th>{alCols.map(([, n]) => <th>{n}</th>)}</tr></thead>
+    <tbody>{alSeries.map((s) => <tr><td>{shortS(s)}</td>{alCols.map(([c]) => { const p = cell(al, s, c); return <td>{p ? <a href={`/past-papers/${p.slug}/`}>{c}</a> : '—'}</td>; })}</tr>)}</tbody>
+  </table></div>
+
+  <h2 id="as">AS (8FM0)</h2>
+  <p class="muted small-text">Paper 1 is Core Pure (80 marks). Paper 2 is two of the eight options (40 marks each). See <a href="/past-papers/as/">AS past papers</a> for a list by series.</p>
+  <div class="table-wrap"><table class="papers-grid">
+    <thead><tr><th>Series</th>{asCols.map(([, n]) => <th>{n}</th>)}</tr></thead>
+    <tbody>{asSeries.map((s) => <tr><td>{shortS(s)}</td>{asCols.map(([c]) => { const p = cell(as, s, c); return <td>{p ? <a href={`/past-papers/${p.slug}/`}>{c}</a> : '—'}</td>; })}</tr>)}</tbody>
+  </table></div>
+  <p class="muted">June 2020 and June 2021 exams were cancelled; the October 2020 series (A level and AS) and the November 2021 series (A level only) were sat instead. The first A-level series was June 2019; AS started in June 2018. Pearson keeps each summer's papers secure for schools for about a year, so the June 2026 papers are expected in autumn 2027 and will be added then.</p>
+</Base>

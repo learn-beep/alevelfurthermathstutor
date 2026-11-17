@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import QuestionCard from '../../components/QuestionCard.astro';
+import { allQuestions } from '../../lib/data';
+const hard = allQuestions.filter((q) => q.difficulty === 'Hard').sort((a, b) => b.year - a.year);
+const easy = allQuestions.filter((q) => q.difficulty === 'Easy').sort((a, b) => b.year - a.year);
+---
+<Base title="Hardest Edexcel A-level Further Maths questions since 2018 (from the examiners' own figures)" context="hardest" leadLine="Want to work through the hard ones with a tutor? Message us.">
+  <h1>The hardest Edexcel A-level Further Maths questions</h1>
+  <p>Pearson's examiner reports sometimes give the proportion of marks scored nationally on a part. For Further Maths they rarely do, because entries for most option papers are small, so only a handful of parts are rated. These are the {hard.length} parts where the figure was under 35%. Each shows the examiner's own comment on where candidates went wrong.</p>
+  {hard.map((q) => <QuestionCard q={q} showTopics={true} />)}
+  <h2>Easy marks you should never drop</h2>
+  <p>The {easy.length} rated parts where 60% or more of the marks were scored. <a href="/questions/">Browse by topic</a> to practise them.</p>
+</Base>

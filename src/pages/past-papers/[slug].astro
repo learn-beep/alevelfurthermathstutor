@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import QuestionCard from '../../components/QuestionCard.astro';
+import { allPapers, byId, topicByslug, PEARSON_MATERIALS } from '../../lib/data';
+export function getStaticPaths() {
+  return allPapers.map((p) => ({ params: { slug: p.slug }, props: { paper: p } }));
+}
+const { paper } = Astro.props;
+const qs = paper.questions.map((id) => byId.get(id)).filter(Boolean);
+const title = `${paper.series} ${paper.qual === 'AS' ? 'AS ' : ''}Further Maths ${paper.paper.replace(/ \(.*/, '')} ${paper.strand} (${paper.spec}/${paper.code})`;
+---
+<Base title={`Edexcel ${title}: questions, mark scheme and examiner's report by question`} description={`Every question in Edexcel ${title} with its topic, marks and difficulty, the mark scheme and the examiner's comments.`} context={`paper:${paper.slug}`} leadLine="Want this paper marked and gone through with a Further Maths tutor? Message us.">
+  <h1>{paper.series}: {paper.qual === 'AS' ? 'AS ' : 'A level '}{paper.name.replace(/^AS /, '')}</h1>
+  <p class="muted">{paper.total} marks · {qs.length} question parts · <a href={PEARSON_MATERIALS} rel="noopener">Question paper, mark scheme and examiner's report on Pearson's site</a></p>
+
+  <h2>Question by question</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Q</th><th>Topic</th><th>Marks</th><th>Difficulty</th></tr></thead>
+    <tbody>{qs.map((q) => <tr>
+      <td><a href={`#${q.id}`}>{q.question}</a></td>
+      <td>{q.topics.map((t, i) => <>{i ? ', ' : ''}<a href={`/questions/${t}/`}>{topicByslug.get(t)?.name ?? t}</a></>)}</td>
+      <td>{q.marks}</td>
+      <td>{q.difficulty ? <span class={`pill pill-${q.difficulty.toLowerCase()}`}>{q.difficulty}</span> : <span class="muted">—</span>}</td>
+    </tr>)}</tbody>
+  </table></div>
+
+  <h2>The questions</h2>
+  <div class="jump">{qs.map((q) => <a href={`#${q.id}`}>{q.question}</a>)}</div>
+  {qs.map((q) => <QuestionCard q={q} showTopics={true} />)}
+</Base>

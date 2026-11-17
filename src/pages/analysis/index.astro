@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import Heatmap from '../../components/Heatmap.astro';
+import weighting from '../../data/weighting.json';
+import spec from '../../data/spec.json';
+import { allPapers, STRANDS } from '../../lib/data';
+const al = allPapers.filter((p) => p.spec === '9FM0');
+const series = [...new Set(al.map((p) => p.series))].reverse();
+const marks = (strand) => (s, sec) => al.filter((p) => p.series === s && p.strand === strand).reduce((n, p) => n + (weighting.byPaper[p.id]?.[sec] || 0), 0);
+const short = (s) => s.replace('June ', 'Jun ').replace('October ', 'Oct ').replace('November ', 'Nov ').replace(' 20', ' ');
+---
+<Base title="What comes up in Edexcel Further Maths: marks by topic, 2019–2025" description="Marks by specification section in every Edexcel A-level Further Maths series since 2019, for Core Pure and each of the eight options, counted from the mark schemes." context="analysis">
+  <h1>What comes up, paper by paper</h1>
+  <p>Marks assessed under each section of the 9FM0 specification in each A-level series, counted from the mark schemes. Core Pure covers Papers 1 and 2 together (150 marks); each option is one 75-mark paper. Darker cells carry more marks; the right-hand column is the total since June 2019. A part that assesses two sections is counted under both.</p>
+  <p class="muted">Jump to: {STRANDS.map((s, i) => <>{i ? ' · ' : ''}<a href={`#${s.toLowerCase().replace(/ /g, '-')}`}>{s}</a></>)}</p>
+  {STRANDS.map((strand) => {
+    const rows = spec.filter((s) => s.strand === strand).map((s) => [s.code, `${s.code.replace(/^(FP|FS|FM|D)\d\./, '')} ${s.title}`]);
+    return <>
+      <h2 id={strand.toLowerCase().replace(/ /g, '-')}>{strand}</h2>
+      <Heatmap areas={rows} series={series} value={marks(strand)} title={`Marks by section, ${strand}`} short={short} />
+    </>;
+  })}
+  <p class="muted">June 2025 is the most recent series Pearson has released publicly. Pearson keeps each summer's papers secure for schools for about a year, so the June 2026 papers are expected here in autumn 2027.</p>
+  <p><a href="/what-came-up/">What came up in the latest papers</a> · <a href="/timeline/">Every paper as a timeline</a></p>
+</Base>

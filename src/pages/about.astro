@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import { allQuestions, allPapers } from '../lib/data';
+---
+<Base title="About this site" context="about" description="Who runs alevelfurthermathstutor.com and where the questions, mark schemes and ratings come from.">
+  <h1>About this site</h1>
+  <p>alevelfurthermathstutor.com is run by {site.company}, an A-level tutoring business with a small team of specialist tutors. The site exists to give Edexcel Further Maths students the past-paper material they actually use, sorted the way they revise, free and without sign-up; and to introduce students who want more help to a tutor who teaches the Edexcel specification every week.</p>
+  <h2>Where the material comes from</h2>
+  <ul>
+    <li><strong>Questions, mark schemes and examiner comments</strong> are from Pearson's published papers for every 9FM0 and 8FM0 series since June 2018: {allPapers.length} papers and {allQuestions.length.toLocaleString()} question parts. Each part has been tagged to the specification statement it assesses.</li>
+    <li><strong>Difficulty ratings</strong> come from the examiners' own reports, where they give the proportion of marks scored nationally on a question: Easy is 60% or more, Hard is under 35%. Parts without a reported figure are left unrated.</li>
+    <li><strong>The formula-booklet page, the options guide and the topic map</strong> are our own, written by our tutors and checked against Pearson's specification and formulae booklet.</li>
+    <li><strong>Grade boundaries and exam dates</strong> are Pearson's published figures.</li>
+  </ul>
+  <h2>Who writes it</h2>
+  <p>The site is run with Emma, our A-level Maths and Further Maths tutor; her profile is on the <a href="/tutors/">tutors page</a>.</p>
+  <h2>Mistakes</h2>
+  <p>If you find one, tell us on the <a href="/report/">report a mistake</a> page; corrections usually go live the same week.</p>
+</Base>

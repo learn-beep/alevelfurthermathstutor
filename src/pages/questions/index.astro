@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allTopics, STRANDS, strandBadge, STRAND_PAPERS } from '../../lib/data';
+---
+<Base title="Edexcel Further Maths questions by topic (every paper since 2018)" description="Every Edexcel AS and A-level Further Maths past-paper question since 2018, sorted into topics for Core Pure and all eight options, with mark schemes and examiner comments." context="questions-index">
+  <h1>Questions by topic</h1>
+  <p>Every Edexcel AS and A-level Further Maths past-paper question since June 2018, sorted into {allTopics.length} topics: Core Pure, then each of the eight option papers. Each page shows every question with its mark scheme, the examiner's comment and the common mistakes.</p>
+  <p class="muted">Jump to: {STRANDS.map((s, i) => <>{i ? ' · ' : ''}<a href={`#${s.toLowerCase().replace(/ /g, '-')}`}>{s}</a></>)}</p>
+  {STRANDS.map((s) => (
+    <>
+      <h2 class="strand-head" id={s.toLowerCase().replace(/ /g, '-')}>{s}</h2>
+      <p class="muted small-text">{STRAND_PAPERS[s]}</p>
+      <ul class="topic-list">
+        {allTopics.filter((t) => t.strand === s).map((t) => <li><a href={`/questions/${t.slug}/`}><span>{t.name}</span><span class="strand"><span class={`badge badge-${strandBadge(t.strand)}`}>{t.strand}</span> {t.parts} parts</span></a></li>)}
+      </ul>
+    </>
+  ))}
+</Base>
